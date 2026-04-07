@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reevo Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Notification Banner -->
+    <div class="top-banner">
+        <span class="banner-text">Elevating Hygiene Standards and fresh smell for Every Space.</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo">
+                <!-- Replace 'your-logo.png' with the path to your actual logo image -->
+                <img src="logo.jpg" alt="Logo" />
+            </a>
+        </div>
+
+        <nav class="navbar-center">
+            <div class="nav-item">
+                HOME
+            </div>
+            <div class="nav-item active">
+                ABOUT US
+            </div>
+            <div class="nav-item has-dropdown">
+                WASHROOM CARE
+                <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <div class="dropdown-menu">
+                    <a href="#">Toilet cleaning</a>
+                    <a href="#">Urinal care</a>
+                    <a href="#">Air freshners</a>
+                </div>
+            </div>
+            <div class="nav-item has-dropdown">
+                PANTRY CARE
+                <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <div class="dropdown-menu">
+                    <a href="#">Tissue products</a>
+                    <a href="#">Vessel cleaner</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                SCENT MACHINES
+            </div>
+            <div class="nav-item has-dropdown">
+                FLOOR &amp; GENERAL CARE
+                <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <div class="dropdown-menu">
+                    <a href="#">Floor cleaning</a>
+                    <a href="#">General</a>
+                    <a href="#">Waste management</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="navbar-right">
+            <button class="btn btn-outline">Contact Us</button>
+            <button class="btn btn-solid">Download Brochure</button>
+        </div>
+    </header>
+
+    <!-- Split-Screen Hero Section -->
+    <section class="hero-split">
+        <div class="hero-content">
+            <!-- Fluid 3D Animated Gradient Mesh -->
+            <div class="fluid-bg">
+                <div class="color-blob blob-1"></div>
+                <div class="color-blob blob-2"></div>
+                <div class="color-blob blob-3"></div>
+            </div>
+
+            <div class="content-slider">
+                <div class="content-slide active">
+                    <h1>Complete Facility Hygiene Solution</h1>
+                    <p>End-to-end cleaning, Washroom and Waste Management System For Modern Work Places.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-solid btn-large">Explore Products</button>
+
+                    </div>
+                </div>
+                <div class="content-slide">
+                    <h1>Smart Washroom Hygiene</h1>
+                    <p>From Urinal Care To Automated Air Diffuser, Maintain Hygiene That Meets Corporate Standards.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-solid btn-large">View Washroom Solutions</button>
+                    </div>
+                </div>
+                <div class="content-slide">
+                    <h1>Uniform Fragrance For Large Spaces.</h1>
+                    <p>FCP WM 2003 Ensures Consistent Scent Coverage Across 5000-7000 sq.ft Environments</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-solid btn-large">Explore Air Care System</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Slider Dots -->
+            <div class="content-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <!-- Play / Pause Control Toggle -->
+                <button id="playPauseBtn" class="slider-control" aria-label="Pause Slider">
+                    <svg class="pause-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                    <svg class="play-icon" style="display: none;" width="12" height="12" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="hero-image" id="heroImage" style="background-image: url('slide3.png');">
+            <!-- Option 2: The MacOS Dock -->
+            <div class="product-dock">
+                <div class="dock-item">
+                    <div class="dock-icon">🧴</div>
+                    <div class="dock-tooltip">
+                        <h4>Heavy Duty Cleaner</h4>
+                        <p>For spotless, shiny floors</p>
+                    </div>
+                </div>
+                <div class="dock-item">
+                    <div class="dock-icon">🍃</div>
+                    <div class="dock-tooltip">
+                        <h4>Eco Air Fresheners</h4>
+                        <p>Long-lasting natural scent</p>
+                    </div>
+                </div>
+                <div class="dock-item">
+                    <div class="dock-icon">🧻</div>
+                    <div class="dock-tooltip">
+                        <h4>Premium Tissues</h4>
+                        <p>Ultra-soft 3-ply comfort</p>
+                    </div>
+                </div>
+                <div class="dock-item">
+                    <div class="dock-icon">✨</div>
+                    <div class="dock-tooltip">
+                        <h4>Vessel Shiner</h4>
+                        <p>Crystal clear pantry wares</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products-section">
+        <div class="section-header">
+            <span class="eyebrow">OUR COLLECTION</span>
+            <h2>FEATURED PRODUCTS</h2>
+            <div class="header-line"></div>
+            <p>Premium Facility & Hygiene Solutions engineered for uncompromised corporate standards.</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">✨</div></div>
+                <div class="card-info">
+                    <h4>Naphthalene Balls</h4>
+                    <p>Grade-A camphor mothballs for drainage and pest control.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">🧴</div></div>
+                <div class="card-info">
+                    <h4>Heavy Duty Cleaner</h4>
+                    <p>Industrial strength liquid for tough grease and deep stains.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">🧻</div></div>
+                <div class="card-info">
+                    <h4>Premium Tissues</h4>
+                    <p>Ultra-soft 3-ply eco-friendly virgin fiber executive tissues.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">🍃</div></div>
+                <div class="card-info">
+                    <h4>Eco Air Freshener</h4>
+                    <p>Natural flower extracts for 24-hour long-lasting aroma.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">🧼</div></div>
+                <div class="card-info">
+                    <h4>Foaming Wash</h4>
+                    <p>pH-balanced antibacterial foam for effective hand hygiene.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">🌬️</div></div>
+                <div class="card-info">
+                    <h4>Auto Dispenser</h4>
+                    <p>Touchless motion-sensing technology for modern offices.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">🗑️</div></div>
+                <div class="card-info">
+                    <h4>Smart Bin Unit</h4>
+                    <p>Compact, hygienic waste management with odor control.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card-small">
+                <div class="card-image"><div class="mockup">🧤</div></div>
+                <div class="card-info">
+                    <h4>Industrial Gloves</h4>
+                    <p>High-durability latex gear for heavy maintenance tasks.</p>
+                    <button class="btn-learn-more">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const contentSlides = document.querySelectorAll('.content-slide');
+        const dots = document.querySelectorAll('.dot');
+        const heroImage = document.getElementById('heroImage');
+
+        // Define images matching the slide topics
+        const images = ['slide3.png', 'slide1.png', 'slide2.png'];
+        let currentSlide = 0;
+        let slideInterval;
+        let isPaused = false; // Tracks auto-cycle state
+
+        function goToSlide(index) {
+            contentSlides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+
+            currentSlide = (index + contentSlides.length) % contentSlides.length;
+
+            contentSlides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+
+            // Swap right side image
+            heroImage.style.backgroundImage = `url('${images[currentSlide]}')`;
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function startSlideShow() {
+            if (!isPaused) {
+                slideInterval = setInterval(nextSlide, 5000); // cycle every 5 seconds
+            }
+        }
+
+        function resetSlideShow() {
+            clearInterval(slideInterval);
+            if (!isPaused) {
+                startSlideShow();
+            }
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const index = parseInt(e.target.getAttribute('data-index'));
+                goToSlide(index);
+                resetSlideShow();
+            });
+        });
+
+        // Pause/Play Interaction
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const pauseIcon = playPauseBtn.querySelector('.pause-icon');
+        const playIcon = playPauseBtn.querySelector('.play-icon');
+
+        playPauseBtn.addEventListener('click', () => {
+            isPaused = !isPaused;
+            if (isPaused) {
+                clearInterval(slideInterval);
+                pauseIcon.style.display = 'none';
+                playIcon.style.display = 'block';
+            } else {
+                startSlideShow();
+                pauseIcon.style.display = 'block';
+                playIcon.style.display = 'none';
+            }
+        });
+
+        startSlideShow(); // Start immediately
+    </script>
+</body>
+
+</html>
