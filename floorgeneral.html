@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor & General Care - CT Cleaning & Hygiene</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Search -->
+    <div class="shop-header fade-in-up">
+        <div class="container">
+            <h1 class="shop-title">Floor & General Care</h1>
+            <p class="shop-desc">Discover our extensive range of floor and general cleaning products, perfect
+                for both retail and wholesale buyers.</p>
+            <div class="search-controls">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="productSearch" class="search-input" placeholder="Search for products...">
+                </div>
+                <div class="view-toggles">
+                    <button class="view-btn active" id="btnGrid" title="Grid View"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" id="btnList" title="List View"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Nav Pills -->
+    
+
+    <!-- =========================================================
+         MAIN PRODUCTS GRID
+         ========================================================= -->
+    <div class="products-wrapper">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar -->
+                <aside class="product-sidebar fade-in-up">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <div class="filter-pills" id="filterContainer">
+                        <button class="filter-pill active" data-filter="all"><i class="fas fa-list"></i> All Products</button>
+                        <button class="filter-pill" data-filter="floor-cleaning"><i class="fas fa-broom"></i> Floor Cleaning</button>
+                        <button class="filter-pill" data-filter="general-care"><i class="fas fa-sparkles"></i> General Care</button>
+                        <button class="filter-pill" data-filter="waste-management"><i class="fas fa-trash-alt"></i> Waste Management</button>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="products-main">
+                    <div class="results-count" id="resultsCount">Showing all products</div>
+                    <div class="row g-4" id="productsGrid">
+
+
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-category="floor-cleaning" data-name="easy mop set 2ft">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/easy_mop.png" alt="Easy Mop Set 2ft">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Easy Mop Set 2ft</h3>
+                            <p class="product-desc">Professional-grade mop with extendable 2ft handle.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
+                    data-category="floor-cleaning" data-name="mop refill 300g">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/mop_refill.png" alt="Mop Refill 300g">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Mop Refill 300g</h3>
+                            <p class="product-desc">High-absorbency 300g replacement yarn for commercial mopping.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
+                    data-category="floor-cleaning" data-name="floor wiper">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/floor_wiper2.png" alt="Floor Wiper">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Floor Wiper</h3>
+                            <p class="product-desc">Durable rubber blade floor wiper for fast water removal.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="floor-cleaning"
+                    data-name="floor brush">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/soft_broom.png" alt="Floor Brush">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Floor Brush</h3>
+                            <p class="product-desc">Hard-bristle scrubbing brush designed for rigorous surfaces.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-category="floor-cleaning" data-name="pvc bucket">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/pvc_bucket.png" alt="PVC Bucket">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">PVC Bucket</h3>
+                            <p class="product-desc">Industrial strength heavy-duty PVC bucket for harsh chemicals.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
+                    data-category="general-care" data-name="floor mat">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/floor_mat.png" alt="Floor Mat">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Floor Mat</h3>
+                            <p class="product-desc">Anti-slip quality floor mat for professional entryways.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
+                    data-category="general-care" data-name="wash basin wiper">
+                    <div class="product-card">
+                        <div class="product-img-wrapper"><img src="assets/images/floor_wiper2.png" alt="Wash Basin Wiper"></div>
+                        <div class="product-info">
+                            <h3 class="product-title">Wash Basin Wiper</h3>
+                            <p class="product-desc">Compact rubber wiper designed for wash basins and countertops.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="general-care"
+                    data-name="dust pan">
+                    <div class="product-card">
+                        <div class="product-img-wrapper"><img src="assets/images/dust_pan.png" alt="Dust Pan"></div>
+                        <div class="product-info">
+                            <h3 class="product-title">Dust Pan</h3>
+                            <p class="product-desc">Wide-mouth commercial plastic dust pan.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
+                    data-category="floor-cleaning" data-name="fabian disinfectant floor cleaner">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/disinfectant_cleaner.png" alt="Fabian Disinfectant Floor Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fabian Disinfectant Floor Cleaner</h3>
+                            <p class="product-desc">Hospital-grade concentrated formula for maximum hygiene.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="general-care"
+                    data-name="fabian glass cleaner">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/glass_cleaner.png" alt="Fabian Glass Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fabian Glass Cleaner</h3>
+                            <p class="product-desc">Streak-free window and mirror treatment spray.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-category="floor-cleaning" data-name="phenyl compound 1:25">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/phenyl_compound.png" alt="Phenyl Compound 1:25">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Phenyl Compound 1:25</h3>
+                            <p class="product-desc">Ultra-concentrated white phenyl for bug repulsion.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
+                    data-category="floor-cleaning" data-name="soap oil">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/soap_oil.png" alt="Soap Oil">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Soap Oil</h3>
+                            <p class="product-desc">Multi-surface soap oil blend for smooth floor cleaning.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="general-care"
+                    data-name="stainless steel polisher">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/steel_polisher.png" alt="Stainless Steel Polisher">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Stainless Steel Polisher</h3>
+                            <p class="product-desc">Restores shine and protects metal surfaces instantly.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-category="general-care" data-name="detergent liquid">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/detergent_liquid.png" alt="Detergent Liquid">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Detergent Liquid</h3>
+                            <p class="product-desc">Bulk industrial strength liquid washing detergent.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
+                    data-category="general-care" data-name="multi purpose cleaner">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/multipurpose_cleaner.png" alt="Multi Purpose Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Multi Purpose Cleaner</h3>
+                            <p class="product-desc">Versatile chemical solution for desks, tiles, and fixtures.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
+                    data-category="general-care" data-name="fabian hand wash">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/handwash.png" alt="Fabian Hand Wash">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fabian Hand Wash</h3>
+                            <p class="product-desc">Antibacterial fragrant liquid hand soap refill.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="waste-management"
+                    data-name="dust bin 50 litre">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/dust_bin.png" alt="Dust Bin 50 Litre">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Dust Bin 50 Litre</h3>
+                            <p class="product-desc">Large rolling 50L plastic waste bin for offices and corridors.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-category="waste-management" data-name="garbage cover small medium large xl">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/garbage_covers.png" alt="Garbage Cover">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Garbage Cover</h3>
+                            <p class="product-desc">Available in Small, Medium, Large &amp; XL Jumbo sizes.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main><!-- /.products-main -->
+        </div><!-- /.products-layout -->
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

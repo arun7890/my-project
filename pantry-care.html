@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantry Care - CT Cleaning & Hygiene</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Search -->
+    <div class="shop-header fade-in-up">
+        <div class="container">
+            <h1 class="shop-title">Pantry Care</h1>
+            <p class="shop-desc">Premium essentials for a clean, organized, and hygienic pantry. From high-quality detergents to superior paper products.</p>
+            <div class="search-controls">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="productSearch" class="search-input" placeholder="Search for products...">
+                </div>
+                <div class="view-toggles">
+                    <button class="view-btn active" id="btnGrid" title="Grid View"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" id="btnList" title="List View"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Nav Pills (Simplified for Pantry Care) -->
+    
+
+    <!-- =========================================================
+         MAIN PRODUCTS GRID
+         ========================================================= -->
+    <div class="products-wrapper">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar -->
+                <aside class="product-sidebar fade-in-up">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <div class="filter-pills" id="filterContainer">
+                        <button class="filter-pill active" data-filter="all"><i class="fas fa-th-large"></i> All Pantry</button>
+                        <button class="filter-pill" data-filter="vessel"><i class="fas fa-utensils"></i> Vessel Cleaning</button>
+                        <button class="filter-pill" data-filter="tissue"><i class="fas fa-scroll"></i> Tissues & Paper</button>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="products-main">
+                    <div class="results-count" id="resultsCount">Showing all pantry products</div>
+                    <div class="row g-4" id="productsGrid">
+
+                <!-- =============================================
+                     VESSEL CLEANING
+                     ============================================= -->
+                
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="vessel"
+                    data-name="fabian dish wash gel">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/dish_wash_gel.png" alt="Fabian Dish Wash Gel">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fabian Dish Wash Gel</h3>
+                            <p class="product-desc">Lemon-boosted grease cutting fluid for sparkling clean utensils.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100" data-category="vessel"
+                    data-name="scrubber">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/scrubber.png" alt="Scrubber">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Scrubber</h3>
+                            <p class="product-desc">Heavy-duty abrasive green pad for everyday stains and grime.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200" data-category="vessel"
+                    data-name="steel scrubber">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/steel_scrubber.png" alt="Steel Scrubber">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Steel Scrubber</h3>
+                            <p class="product-desc">Wound stainless steel wire for heavy-duty pot and pan scrubbing.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =============================================
+                     TISSUES & PAPER
+                     ============================================= -->
+                
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-category="tissue"
+                    data-name="m-fold tissue">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/m_fold_tissue.png" alt="M-Fold Tissue">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">M-Fold Tissue</h3>
+                            <p class="product-desc">Highly absorbent interlocking paper towels for dispensers.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100" data-category="tissue"
+                    data-name="dinner napkin 29cm">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/dinner_napkin.png" alt="Dinner Napkin 29cm">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Dinner Napkin 29cm</h3>
+                            <p class="product-desc">Soft, premium 29cm square napkins for refined food service.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200" data-category="tissue"
+                    data-name="facial box tissue">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/facial_tissue.png" alt="Facial Box Tissue">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Facial Box Tissue</h3>
+                            <p class="product-desc">Ultra-soft, skin-friendly tissues in an elegant presentation box.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </main><!-- /.products-main -->
+        </div><!-- /.products-layout -->
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+

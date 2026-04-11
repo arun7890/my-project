@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washroom Care - CT Cleaning &amp; Hygiene</title>
+    <meta name="description"
+        content="Premium washroom care products — toilet cleaning, urinal care, and air freshening solutions for commercial and retail use.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=2.0">
+</head>
+
+<body>
+
+    <!-- Header & Search -->
+    <div class="shop-header fade-in-up">
+        <div class="container">
+            <h1 class="shop-title">Washroom Care</h1>
+            <p class="shop-desc">Premium solutions for toilet cleaning, urinal care, and air freshening. Keep your
+                washrooms pristine and fragrant.</p>
+            <div class="search-controls">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="productSearch" class="search-input"
+                        placeholder="Search washroom products...">
+                </div>
+                <div class="view-toggles">
+                    <button class="view-btn active" id="btnGrid" title="Grid View"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" id="btnList" title="List View"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         SUBCATEGORY FILTER PILLS
+         ========================================================= -->
+    
+
+    <!-- =========================================================
+         PRODUCTS GRID
+         ========================================================= -->
+    <div class="products-wrapper">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar -->
+                <aside class="product-sidebar fade-in-up">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <div class="filter-pills" id="filterContainer">
+                        <button class="filter-pill active" data-filter="all"><i class="fas fa-border-all"></i> All Products</button>
+                        <button class="filter-pill" data-filter="toilet-care"><i class="fas fa-toilet"></i> Toilet Care</button>
+                        <button class="filter-pill" data-filter="urinal-care"><i class="fas fa-restroom"></i> Urinal Care</button>
+                        <button class="filter-pill" data-filter="air-freshening"><i class="fas fa-wind"></i> Air Freshening</button>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="products-main">
+                    <div class="results-count" id="resultsCount">Showing all washroom products</div>
+                    <div class="row g-4 dedicated-category-page" id="productsGrid">
+
+
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-subcategory="toilet-care"
+                    data-name="plunger">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/plunger.png" alt="Plunger">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Plunger</h3>
+                            <p class="product-desc">Standard rubber suction plunger with wooden handle.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-subcategory="toilet-care" data-name="toilet brush">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/toilet_brush.png" alt="Toilet Brush">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Toilet Brush</h3>
+                            <p class="product-desc">Includes robust stand and curve-reaching bristles.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
+                    data-subcategory="toilet-care" data-name="fabian toilet bowl cleaner">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/toilet_bowl_cleaner.png" alt="Fabian Toilet Bowl Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fabian Toilet Bowl Cleaner</h3>
+                            <p class="product-desc">Thick gel formula for tackling tough limescale stains.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
+                    data-subcategory="toilet-care" data-name="toilet roll">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/toilet_roll.png" alt="Toilet Roll">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Toilet Roll</h3>
+                            <p class="product-desc">Soft 2-ply commercial bathroom rolls (150–450 pulls).</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-subcategory="urinal-care"
+                    data-name="urinal mat">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/urinal_mat.png" alt="Urinal Mat">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Urinal Mat</h3>
+                            <p class="product-desc">Scented debris-catching mat for public urinals.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-subcategory="urinal-care" data-name="urinal cubes">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/urinal_cubes.png" alt="Urinal Cubes">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Urinal Cubes</h3>
+                            <p class="product-desc">Pardichlorobenzene blocks for powerful odor masking.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
+                    data-subcategory="urinal-care" data-name="naphthalene balls">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/naphthalene_balls.png" alt="Naphthalene Balls">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Naphthalene Balls</h3>
+                            <p class="product-desc">Grade-A camphor mothballs for drainage and pest control.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up" data-subcategory="air-freshening"
+                    data-name="non alcoholic air freshener fabian lime">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/air_freshener.png" alt="Non-Alcoholic Air Freshener">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Non-Alcoholic Air Freshener</h3>
+                            <p class="product-desc">Long-lasting (up to 6 hrs). Available in 10 fragrances — Lemon,
+                                Blossom, Jasmine, Sandalwood &amp; more. No dilution needed.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
+                    data-subcategory="air-freshening" data-name="fabian air freshener">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/air_freshener.png" alt="Fabian Air Freshener">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fabian Air Freshener</h3>
+                            <p class="product-desc">Liquid spray freshener available in 10 unique flavours.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
+                    data-subcategory="air-freshening" data-name="odonil">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/odonil.png" alt="Odonil">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Odonil</h3>
+                            <p class="product-desc">Classic evaporating bathroom fragrance block.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
+                    data-subcategory="air-freshening" data-name="godrej aer pocket">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/aer_pocket.png" alt="Godrej Aer Pocket">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Godrej Aer Pocket</h3>
+                            <p class="product-desc">Gel-based bathroom scent pouch lasting up to 30 days.</p>
+                            <button class="btn btn-quote">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main><!-- /.products-main -->
+        </div><!-- /.products-layout -->
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
