@@ -2,6 +2,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── State ────────────────────────────────────────────────────────────────
     let currentSearch = '';
+    let currentFilter  = 'all';
+    let currentSubFilter = 'all';
+
+    const subcatMap = {
+        'washroom': [
+            { id: 'toilet', label: 'Toilet Care' },
+            { id: 'urinal', label: 'Urinal Care' },
+            { id: 'airfreshener', label: 'Air Fresheners' }
+        ],
+        'pantry': [
+            { id: 'vessel', label: 'Vessel Cleaning' },
+            { id: 'tissue', label: 'Tissue & Paper' }
+        ],
+        'scent': [
+            { id: 'scent-machines', label: 'Scent Machines' }
+        ],
+        'floor': [
+            { id: 'floor-tools', label: 'Floor Tools' },
+            { id: 'liquid-cleaners', label: 'Liquid Cleaners' },
+            { id: 'waste', label: 'Waste Management' }
+        ]
+    };
 
     // ─── DOM refs ─────────────────────────────────────────────────────────────
     const productItems = document.querySelectorAll('.product-item');
@@ -10,9 +32,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnGrid      = document.getElementById('btnGrid');
     const btnList      = document.getElementById('btnList');
     const productsGrid = document.getElementById('productsGrid');
-    const filterPills  = document.querySelectorAll('.filter-pill');
+    const filterPills  = document.querySelectorAll('#subCategoryContainer .sub-nav-pill');
+    const secondarySubNav = document.getElementById('secondarySubNav');
 
-    let currentFilter  = 'all';
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const navbarCenter = document.getElementById('navbarCenter');
+
+    const toggleMobileMenu = (isOpen) => {
+        if (navbarCenter) navbarCenter.classList.toggle('active', isOpen);
+        if (mobileNavOverlay) mobileNavOverlay.classList.toggle('active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    };
+
+    if (mobileNavToggle) mobileNavToggle.addEventListener('click', () => toggleMobileMenu(true));
+    if (mobileNavClose) mobileNavClose.addEventListener('click', () => toggleMobileMenu(false));
+    if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', () => toggleMobileMenu(false));
+
+    if (navbarCenter) {
+        const navLinks = navbarCenter.querySelectorAll('.nav-item:not(.has-dropdown)');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(false));
+        });
+    }
+
+    // ─── Magnetic Button Effect ───────────────────────────────────────────────
+    const magneticButtons = document.querySelectorAll('.btn-magnetic');
+    magneticButtons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const position = btn.getBoundingClientRect();
+            const x = e.pageX - position.left - position.width / 2;
+            const y = e.pageY - position.top - position.height / 2 - window.scrollY;
+
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            btn.style.transition = 'none';
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+            btn.style.transform = 'translate(0px, 0px)';
+        });
+    });
 
     // ─── Core filter ──────────────────────────────────────────────────────────
     function filterProducts() {
@@ -24,9 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const subcategory = item.getAttribute('data-subcategory') || '';
             
             const matchesSearch = name.includes(currentSearch);
-            let matchesFilter = (currentFilter === 'all' || category === currentFilter || subcategory === currentFilter);
+            // Main filter can match either Category or Subcategory
+            let matchesMain = (currentFilter === 'all' || category === currentFilter || subcategory === currentFilter);
+            // Sub-filter only matches Subcategory (used in All Products heirarchy)
+            let matchesSub = (currentSubFilter === 'all' || subcategory === currentSubFilter);
 
-            const show = matchesSearch && matchesFilter;
+            const show = matchesSearch && matchesMain && matchesSub;
             
             item.style.display = show ? '' : 'none';
             if (show) {
@@ -37,43 +101,74 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Sync section headers if they exist
-        const sectionHeaders = document.querySelectorAll('.section-header-row');
-        sectionHeaders.forEach(header => {
-            const headerCat = header.getAttribute('data-category') || '';
-            const hasVisibleProducts = Array.from(productItems).some(item => {
-                return item.style.display !== 'none' && 
-                       (item.getAttribute('data-category') === headerCat || item.getAttribute('data-subcategory') === headerCat);
-            });
-            header.style.display = (currentFilter === 'all' && hasVisibleProducts) || (currentFilter === headerCat && hasVisibleProducts) ? 'block' : 'none';
-        });
-
         // Results count
         if (resultsText) {
-            resultsText.textContent = `Showing ${visible} products`;
+            let filterName = 'all products';
+            const activeSubPill = document.querySelector('.secondary-pills .sub-nav-pill.active');
+            const activeMainPill = document.querySelector('#subCategoryContainer .sub-nav-pill.active');
+            
+            if (currentSubFilter !== 'all' && activeSubPill) {
+                filterName = activeSubPill.textContent;
+            } else if (currentFilter !== 'all' && activeMainPill) {
+                filterName = activeMainPill.textContent;
+            }
+            resultsText.textContent = `Showing ${visible} ${filterName}`;
         }
     }
 
-    // ─── Search ───────────────────────────────────────────────────────────────
-    if (searchInput) {
-        searchInput.addEventListener('input', e => {
-            currentSearch = e.target.value.toLowerCase().trim();
-            filterProducts();
+    // ─── Secondary Nav Creation ────────────────────────────────────────────────
+    function updateSecondaryNav(category) {
+        if (!secondarySubNav) return;
+
+        secondarySubNav.innerHTML = '';
+        if (category === 'all' || !subcatMap[category]) {
+            secondarySubNav.style.display = 'none';
+            return;
+        }
+
+        secondarySubNav.style.display = 'flex';
+        
+        // Add "All [Category]" button
+        const allBtn = document.createElement('button');
+        allBtn.className = 'sub-nav-pill active';
+        allBtn.setAttribute('data-filter', 'all');
+        const catLabel = category.charAt(0).toUpperCase() + category.slice(1);
+        allBtn.textContent = 'All ' + (catLabel === 'Floor' ? 'Floor & General' : catLabel);
+        secondarySubNav.appendChild(allBtn);
+
+        subcatMap[category].forEach(sub => {
+            const btn = document.createElement('button');
+            btn.className = 'sub-nav-pill';
+            btn.setAttribute('data-filter', sub.id);
+            btn.textContent = sub.label;
+            secondarySubNav.appendChild(btn);
+        });
+
+        // Add listeners to new pills
+        secondarySubNav.querySelectorAll('.sub-nav-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                secondarySubNav.querySelectorAll('.sub-nav-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                currentSubFilter = pill.getAttribute('data-filter');
+                filterProducts();
+            });
         });
     }
 
-    // ─── Filter Pills ───────────────────────────────────────────────────────
+    // ─── Main Category Pills ───────────────────────────────────────────────────
     filterPills.forEach(pill => {
         pill.addEventListener('click', () => {
-            // Update active state
             filterPills.forEach(p => p.classList.remove('active'));
             pill.classList.add('active');
 
-            // Set filter
             currentFilter = pill.getAttribute('data-filter');
+            currentSubFilter = 'all'; 
+            
+            updateSecondaryNav(currentFilter);
             filterProducts();
         });
     });
+
 
     // ─── View toggle (grid / list) ────────────────────────────────────────────
     if (btnGrid && btnList && productsGrid) {
@@ -124,6 +219,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
         });
     }, 100);
+
+    // ─── Search input ─────────────────────────────────────────────────────────
+    if (searchInput) {
+        searchInput.addEventListener('input', e => {
+            currentSearch = e.target.value.toLowerCase().trim();
+            filterProducts();
+        });
+    }
 
     // ─── Boot ─────────────────────────────────────────────────────────────────
     filterProducts();
