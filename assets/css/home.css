@@ -262,15 +262,15 @@ body {
 }
 
 .btn-outline {
-    background-color: #ffffff;
-    color: #0066CC;
-    border: 1px solid #0066CC;
+    background-color: transparent;
+    color: #991b1b;
+    border: 1px solid #991b1b;
 }
 
 .btn-outline:hover {
-    border-color: #004C99;
-    background-color: #e6f0fc;
-    color: #004C99;
+    border-color: #7f1d1d;
+    background-color: rgba(153, 27, 27, 0.05);
+    color: #7f1d1d;
 }
 
 .btn-solid {

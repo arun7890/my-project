@@ -79,8 +79,9 @@
         </nav>
 
         <div class="navbar-right">
-            <a href="contact.html" class="btn btn-outline btn-magnetic" style="text-decoration: none;">Contact Us</a>
-            <button class="btn btn-solid btn-magnetic">Download Brochure</button>
+            <a href="contact.html" class="btn btn-solid btn-magnetic" style="text-decoration: none;">Contact Us</a>
+            <a href="assets/Classic Traders Profile.pdf" download="ct_traders_brochure.pdf"
+                class="btn btn-outline btn-magnetic" style="text-decoration: none;">Download Brochure</a>
             <!-- Mobile Toggle Button -->
             <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -108,23 +109,21 @@
                     <h1>Complete Facility Hygiene Solution</h1>
                     <p>End-to-end cleaning, Washroom and Waste Management System For Modern Work Places.</p>
                     <div class="hero-buttons">
-                        <button class="btn btn-solid btn-large btn-magnetic">Explore Products</button>
-
+                        <a href="allproducts.html" class="btn btn-solid btn-large btn-magnetic" style="text-decoration: none;">Explore Products</a>
                     </div>
                 </div>
                 <div class="content-slide">
                     <h1>Smart Washroom Hygiene</h1>
                     <p>From Urinal Care To Automated Air Diffuser, Maintain Hygiene That Meets Corporate Standards.</p>
                     <div class="hero-buttons">
-                        <button class="btn btn-solid btn-large btn-magnetic">View Washroom Solutions</button>
+                        <a href="washroom-care.html" class="btn btn-solid btn-large btn-magnetic" style="text-decoration: none;">View Washroom Solutions</a>
                     </div>
                 </div>
                 <div class="content-slide">
                     <h1>Uniform Fragrance For Large Spaces.</h1>
                     <p>FCP WM 2003 Ensures Consistent Scent Coverage Across 5000-7000 sq.ft Environments</p>
                     <div class="hero-buttons">
-                        <button class="btn btn-solid btn-large btn-magnetic">Explore Air Care System</button>
-
+                        <a href="scent-machines.html" class="btn btn-solid btn-large btn-magnetic" style="text-decoration: none;">Explore Air Care System</a>
                     </div>
                 </div>
             </div>
@@ -147,14 +146,14 @@
                         <p>For spotless, shiny floors</p>
                     </div>
                 </div>
-                <div class="dock-item">
+                <div class="dock-item" onclick="window.location.href='washroom-care.html'">
                     <div class="dock-icon">🍃</div>
                     <div class="dock-tooltip">
                         <h4>Eco Air Fresheners</h4>
                         <p>Long-lasting natural scent</p>
                     </div>
                 </div>
-                <div class="dock-item">
+                <div class="dock-item" onclick="window.location.href='pantry-care.html'">
                     <div class="dock-icon">🧻</div>
                     <div class="dock-tooltip">
                         <h4>Premium Tissues</h4>
@@ -381,21 +380,23 @@
         <div class="categories-grid">
             <!-- Category 1: Washroom Care -->
             <div class="category-card reveal reveal-scale delay-1">
-                <div class="category-image">
-                    <img src="assets/images/category_washroom.png" alt="Washroom Care" />
-                </div>
-                <div class="category-info">
-                    <h3>Washroom Care</h3>
-                    <p>Complete hygiene for modern restrooms.</p>
-                    <a href="washroom-care.html" class="category-link">
-                        Explore Now
-                        <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
+                <a href="washroom-care.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="category-image">
+                        <img src="assets/images/category_washroom.png" alt="Washroom Care" />
+                    </div>
+                    <div class="category-info">
+                        <h3>Washroom Care</h3>
+                        <p>Complete hygiene for modern restrooms.</p>
+                        <span class="category-link">
+                            Explore Now
+                            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
             </div>
 
             <!-- Category 2: Pantry Care -->
@@ -763,7 +764,7 @@
                     <li><a href="pantry-care.html">Pantry Care</a></li>
                     <li><a href="scent-machines.html">Scent Machines</a></li>
                     <li><a href="floorgeneral.html">Floor & General Care</a></li>
-                    
+
                 </ul>
             </div>
 
@@ -950,4 +951,3 @@
 </body>
 
 </html>
-

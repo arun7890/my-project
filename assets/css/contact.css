@@ -40,7 +40,7 @@ body {
 
 /* Notification Banner */
 .top-banner {
-    background-color: #e6f0fc;
+    background-color: rgba(153, 27, 27, 0.05);
     /* Subtle blue */
     padding: 12px 20px;
     display: none; /* Hidden by default, shown via JS for first-time visitors */
@@ -263,14 +263,14 @@ body {
 
 .btn-outline {
     background-color: #ffffff;
-    color: #0066CC;
-    border: 1px solid #0066CC;
+    color: #991b1b;
+    border: 1px solid #991b1b;
 }
 
 .btn-outline:hover {
-    border-color: #004C99;
-    background-color: #e6f0fc;
-    color: #004C99;
+    border-color: #7f1d1d;
+    background-color: rgba(153, 27, 27, 0.05);
+    color: #7f1d1d;
 }
 
 .btn-solid {
@@ -318,7 +318,7 @@ body {
 
 .mobile-nav-toggle:hover,
 .mobile-nav-close:hover {
-    color: #0066CC;
+    color: #991b1b;
 }
 
 /* Hero Split-Screen Styles */
@@ -397,7 +397,7 @@ body {
 .blob-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, #e6f0fc 0%, rgba(230, 240, 252, 0) 70%);
+    background: radial-gradient(circle, rgba(153, 27, 27, 0.05) 0%, rgba(230, 240, 252, 0) 70%);
     top: -100px;
     left: -100px;
     animation-duration: 25s;
@@ -501,7 +501,7 @@ body {
 }
 
 .content-dots .dot.active {
-    background-color: #0066CC;
+    background-color: #991b1b;
     transform: scale(1.3);
 }
 
@@ -658,7 +658,7 @@ body {
 .section-header .eyebrow {
     font-size: 12px;
     font-weight: 700;
-    color: #0066CC;
+    color: #991b1b;
     letter-spacing: 2px;
     text-transform: uppercase;
     display: block;
@@ -809,7 +809,7 @@ body {
     border-bottom-color: #7f1818;
     background-image: 
         radial-gradient(at 0% 0%, #991b1b 0, transparent 50%), 
-        radial-gradient(at 50% 0%, #0066CC 0, transparent 50%), 
+        radial-gradient(at 50% 0%, #991b1b 0, transparent 50%), 
         radial-gradient(at 100% 0%, #991b1b 0, transparent 50%), 
         radial-gradient(at 0% 100%, #111111 0, transparent 50%), 
         radial-gradient(at 100% 100%, #991b1b 0, transparent 50%);
@@ -864,7 +864,7 @@ body {
 .category-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 30px 60px rgba(0, 0, 102, 0.07);
-    border-color: #0066CC;
+    border-color: #991b1b;
 }
 
 .category-image {
@@ -1454,7 +1454,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #0066CC;
+    border-color: #991b1b;
     background-color: #ffffff;
     box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
 }
@@ -1855,7 +1855,7 @@ body {
     position: absolute;
     top: -15px;
     right: -20px;
-    color: #0066CC;
+    color: #991b1b;
     animation: sparklePulse 4s infinite ease-in-out;
     pointer-events: none;
     opacity: 0.6;
@@ -1945,7 +1945,7 @@ body {
 }
 
 .faq-item:hover {
-    border-color: #0066CC;
+    border-color: #991b1b;
     box-shadow: 0 10px 30px rgba(0, 102, 204, 0.05);
 }
 
@@ -2046,7 +2046,7 @@ body {
     }
 }.contact-hero {
     padding: 90px 6% 30px;
-    background: linear-gradient(135deg, #f8fbff 0%, #e6f0fc 100%);
+    background: linear-gradient(135deg, #f8fbff 0%, rgba(153, 27, 27, 0.05) 100%);
     text-align: center;
     position: relative;
     overflow: hidden;
