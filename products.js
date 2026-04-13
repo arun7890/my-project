@@ -199,7 +199,13 @@ const products = [
 
 // Helper function to find a product by ID or Name
 function getProductById(id) {
-    return products.find(p => p.id === id || p.name.toLowerCase().replace(/ /g, '-') === id || p.sku === id);
+    if (!id) return null;
+    const normalizedId = id.toLowerCase().replace(/ /g, '-');
+    return products.find(p => 
+        p.id.toLowerCase() === normalizedId || 
+        p.name.toLowerCase().replace(/ /g, '-') === normalizedId || 
+        p.sku.toLowerCase() === id.toLowerCase()
+    );
 }
 
 // Helper function to get related products
