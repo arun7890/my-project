@@ -7,20 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const subcatMap = {
         'washroom': [
-            { id: 'toilet', label: 'Toilet Care' },
+            { id: 'toilet', label: 'Toilet Cleaning' },
             { id: 'urinal', label: 'Urinal Care' },
-            { id: 'airfreshener', label: 'Air Fresheners' }
+            { id: 'airfreshener', label: 'Air Freshners' }
         ],
         'pantry': [
-            { id: 'vessel', label: 'Vessel Cleaning' },
-            { id: 'tissue', label: 'Tissue & Paper' }
+            { id: 'vessel', label: 'Vessel Cleaners' },
+            { id: 'tissue', label: 'Tissue Products' }
         ],
         'scent': [
             { id: 'scent-machines', label: 'Scent Machines' }
         ],
         'floor': [
-            { id: 'floor-tools', label: 'Floor Tools' },
-            { id: 'liquid-cleaners', label: 'Liquid Cleaners' },
+            { id: 'floor-tools', label: 'Floor Cleaning' },
+            { id: 'liquid-cleaners', label: 'General Care' },
             { id: 'waste', label: 'Waste Management' }
         ]
     };
