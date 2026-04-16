@@ -43,7 +43,8 @@ body {
     background-color: #e6f0fc;
     /* Subtle blue */
     padding: 12px 20px;
-    display: none; /* Hidden by default, shown via JS for first-time visitors */
+    display: none;
+    /* Hidden by default, shown via JS for first-time visitors */
     justify-content: center;
     align-items: center;
     font-size: 14px;
@@ -289,7 +290,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    line-height: 1; /* Ensures text doesn't shift the flex container baseline */
+    line-height: 1;
+    /* Ensures text doesn't shift the flex container baseline */
 }
 
 .btn-arrow {
@@ -529,10 +531,11 @@ body {
 
 .hero-image {
     flex: 1;
-    background-image: url('slide3.png');
+    background-image: url('assets/slide3.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
+    /* Parallax effect */
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     margin: 20px 20px 20px 0;
@@ -747,7 +750,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 12px; /* Minimum gap between items */
+    gap: 12px;
+    /* Minimum gap between items */
 }
 
 .card-info h4 {
@@ -769,13 +773,15 @@ body {
     line-height: 1.5;
 }
 
-.btn-learn-more, 
+.btn-learn-more,
 .category-link {
     position: relative;
     overflow: hidden;
     width: fit-content;
-    margin: auto auto 0; /* Keeps alignment at bottom */
-    margin-top: 20px;    /* Ensures a minimum gap of 20px from description */
+    margin: auto auto 0;
+    /* Keeps alignment at bottom */
+    margin-top: 20px;
+    /* Ensures a minimum gap of 20px from description */
     padding: 10px 24px;
     background-color: #ffffff;
     color: #991b1b;
@@ -807,11 +813,11 @@ body {
     color: #ffffff;
     border-color: transparent;
     border-bottom-color: #7f1818;
-    background-image: 
-        radial-gradient(at 0% 0%, #991b1b 0, transparent 50%), 
-        radial-gradient(at 50% 0%, #0066CC 0, transparent 50%), 
-        radial-gradient(at 100% 0%, #991b1b 0, transparent 50%), 
-        radial-gradient(at 0% 100%, #111111 0, transparent 50%), 
+    background-image:
+        radial-gradient(at 0% 0%, #991b1b 0, transparent 50%),
+        radial-gradient(at 50% 0%, #0066CC 0, transparent 50%),
+        radial-gradient(at 100% 0%, #991b1b 0, transparent 50%),
+        radial-gradient(at 0% 100%, #111111 0, transparent 50%),
         radial-gradient(at 100% 100%, #991b1b 0, transparent 50%);
     background-color: #991b1b;
     animation: mesh-move 4s ease infinite;
@@ -830,9 +836,17 @@ body {
 }
 
 @keyframes mesh-move {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Categories Section */
@@ -1014,7 +1028,8 @@ body {
     .navbar-center {
         position: fixed;
         top: 0;
-        right: -100%; /* Hidden by default */
+        right: -100%;
+        /* Hidden by default */
         width: 300px;
         height: 100vh;
         background-color: rgba(255, 255, 255, 0.98);
@@ -1032,7 +1047,8 @@ body {
     }
 
     .navbar-center.active {
-        right: 0; /* Show drawer */
+        right: 0;
+        /* Show drawer */
         visibility: visible;
     }
 
@@ -1063,7 +1079,8 @@ body {
     }
 
     .nav-item .chevron {
-        margin-left: auto; /* Push chevron to the right on mobile */
+        margin-left: auto;
+        /* Push chevron to the right on mobile */
     }
 
     .dropdown-menu {
@@ -1081,7 +1098,8 @@ body {
     }
 
     .nav-item.has-dropdown:hover .dropdown-menu {
-        max-height: 500px; /* Expand on hover for simple logic, or use JS for toggle */
+        max-height: 500px;
+        /* Expand on hover for simple logic, or use JS for toggle */
     }
 
     .navbar-right {
@@ -1090,7 +1108,8 @@ body {
 
     .navbar-right .btn-outline,
     .navbar-right .btn-solid {
-        display: none; /* Hide buttons on mobile header to save space */
+        display: none;
+        /* Hide buttons on mobile header to save space */
     }
 
     .hero-split {
@@ -1293,6 +1312,7 @@ body {
     0% {
         transform: translateX(0);
     }
+
     100% {
         /* Total width for 6 slides: 6 * (220px + 120px gap) = 2040px */
         transform: translateX(-2040px);
@@ -1303,23 +1323,30 @@ body {
     .slider-section {
         padding: 60px 0;
     }
+
     .slide {
         width: 160px;
         height: 80px;
         padding: 10px;
     }
+
     .slider-track {
         gap: 50px;
     }
+
     .slider-container::before,
     .slider-container::after {
         width: 100px;
     }
+
     @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { 
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
             /* 5 slides * (160px + 50px gap) = 1050px */
-            transform: translateX(-1050px); 
+            transform: translateX(-1050px);
         }
     }
 }
@@ -1335,7 +1362,8 @@ body {
     margin: 0 auto;
     display: flex;
     gap: 80px;
-    align-items: stretch; /* Match height of both columns */
+    align-items: stretch;
+    /* Match height of both columns */
 }
 
 .contact-info {
@@ -1481,6 +1509,7 @@ body {
         flex-direction: column;
         gap: 60px;
     }
+
     .contact-form-container {
         width: 100%;
     }
@@ -1491,9 +1520,11 @@ body {
         flex-direction: column;
         gap: 24px;
     }
+
     .contact-form-container {
         padding: 30px 20px;
     }
+
     .contact-info h2 {
         font-size: 32px;
     }
@@ -1502,7 +1533,8 @@ body {
 /* Working Process Section Styles */
 .process-section {
     padding: 40px 6%;
-    background-color: #ffffff; /* Unified clean background */
+    background-color: #ffffff;
+    /* Unified clean background */
     position: relative;
     overflow: hidden;
 }
@@ -1604,11 +1636,13 @@ body {
     .process-line {
         display: none;
     }
+
     .process-steps {
         flex-direction: column;
         align-items: center;
         gap: 60px;
     }
+
     .process-container {
         margin-top: 40px;
     }
@@ -1752,9 +1786,11 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
     .social-links {
         justify-content: center;
     }
+
     .footer-bottom-content {
         flex-direction: column;
         gap: 16px;
@@ -1765,8 +1801,8 @@ body {
 /* --- New Premium Visual Enhancements --- */
 
 /* Hygiene Gradient Glows */
-.featured-products-section, 
-.categories-section, 
+.featured-products-section,
+.categories-section,
 .about-section,
 .process-section,
 .contact-section {
@@ -1801,14 +1837,12 @@ body {
     left: -100%;
     width: 300%;
     height: 300%;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0) 45%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0) 55%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 45%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0) 55%,
+            rgba(255, 255, 255, 0) 100%);
     filter: blur(100px);
     z-index: 0;
     pointer-events: none;
@@ -1817,17 +1851,27 @@ body {
 }
 
 @keyframes slowFloat {
-    from { transform: translate(0, 0); }
-    to { transform: translate(60px, 40px); }
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(60px, 40px);
+    }
 }
 
 @keyframes shineMove {
-    0% { transform: translateX(-50%) rotate(25deg); }
-    100% { transform: translateX(50%) rotate(25deg); }
+    0% {
+        transform: translateX(-50%) rotate(25deg);
+    }
+
+    100% {
+        transform: translateX(50%) rotate(25deg);
+    }
 }
 
 /* Glassmorphism Cards */
-.product-card-small, 
+.product-card-small,
 .category-card {
     background: rgba(255, 255, 255, 0.7) !important;
     backdrop-filter: blur(12px);
@@ -1837,7 +1881,7 @@ body {
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) !important;
 }
 
-.product-card-small:hover, 
+.product-card-small:hover,
 .category-card:hover {
     background: rgba(255, 255, 255, 0.95) !important;
     transform: translateY(-12px) scale(1.01);
@@ -1872,8 +1916,17 @@ body {
 }
 
 @keyframes sparklePulse {
-    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.2; }
-    50% { transform: scale(1.4) rotate(20deg); opacity: 0.8; }
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: scale(1.4) rotate(20deg);
+        opacity: 0.8;
+    }
 }
 
 /* Enhanced Section Headers */
@@ -1889,11 +1942,25 @@ body {
     will-change: transform, opacity;
 }
 
-.reveal-up { transform: translateY(40px); }
-.reveal-down { transform: translateY(-40px); }
-.reveal-left { transform: translateX(-40px); }
-.reveal-right { transform: translateX(40px); }
-.reveal-scale { transform: scale(0.95); }
+.reveal-up {
+    transform: translateY(40px);
+}
+
+.reveal-down {
+    transform: translateY(-40px);
+}
+
+.reveal-left {
+    transform: translateX(-40px);
+}
+
+.reveal-right {
+    transform: translateX(40px);
+}
+
+.reveal-scale {
+    transform: scale(0.95);
+}
 
 .reveal-visible {
     opacity: 1;
@@ -1901,14 +1968,37 @@ body {
 }
 
 /* Staggered Delays for Grid Items */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; }
-.delay-6 { transition-delay: 0.6s; }
-.delay-7 { transition-delay: 0.7s; }
-.delay-8 { transition-delay: 0.8s; }
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
+
+.delay-5 {
+    transition-delay: 0.5s;
+}
+
+.delay-6 {
+    transition-delay: 0.6s;
+}
+
+.delay-7 {
+    transition-delay: 0.7s;
+}
+
+.delay-8 {
+    transition-delay: 0.8s;
+}
 
 /* Magnetic Button Interaction */
 .btn-magnetic {
@@ -2038,9 +2128,11 @@ body {
         padding: 20px;
         font-size: 16px;
     }
+
     .faq-answer {
         padding: 0 20px;
     }
+
     .faq-item.active .faq-answer {
         padding: 0 20px 20px;
     }
