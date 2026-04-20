@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Classic Traders | Premium Hygiene Solutions</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
-
     <!-- Notification Banner -->
     <div class="top-banner">
         <span class="banner-text">Elevating Hygiene Standards and fresh smell for Every Space.</span>
@@ -29,7 +29,6 @@
         </div>
 
         <nav class="navbar-center" id="navbarCenter">
-            <!-- Mobile Close Button -->
             <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close Menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -48,7 +47,7 @@
                 <div class="dropdown-menu">
                     <a href="washroom-care.html">Toilet Cleaning</a>
                     <a href="washroom-care.html">Urinal Care</a>
-                    <a href="washroom-care.html">Air Freshners</a>
+                    <a href="washroom-care.html" class="drawer-link">Air Freshners</a>
                 </div>
             </div>
             <div class="nav-item has-dropdown">
@@ -64,7 +63,7 @@
             </div>
             <a href="scent-machines.html" class="nav-item" style="text-decoration: none;">SCENT MACHINES</a>
             <div class="nav-item has-dropdown">
-                FLOOR &amp; GENERAL CARE
+                FLOOR & GENERAL CARE
                 <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="6 9 12 15 18 9"></polyline>
@@ -78,200 +77,112 @@
         </nav>
 
         <div class="navbar-right">
-            <a href="contact.html" class="btn btn-solid btn-magnetic" style="text-decoration: none;">Contact Us</a>
-            <a href="assets/Classic Traders Profile.pdf" download="ct_traders_brochure.pdf"
-                class="btn btn-outline btn-magnetic" style="text-decoration: none;">Download Brochure</a>
-            <!-- Mobile Toggle Button -->
-            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
+            <a href="tel:+917996077797" class="mobile-contact-pill" aria-label="Call Us">
+                <div class="mobile-contact-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="mobile-contact-text">
+                    <span class="mobile-contact-label">REACH US</span>
+                    <span class="mobile-contact-number">+91 79960 77797</span>
+                </div>
+            </a>
+            <a href="contact.html" class="btn btn-solid btn-magnetic">Contact Us</a>
+            <a href="assets/Classic Traders Profile.pdf" download="ct_traders_brochure.pdf" class="btn btn-outline btn-magnetic">Download Brochure</a>
         </div>
     </header>
 
-    <!-- Contact Hero -->
-    <section class="contact-hero">
-        <div class="fluid-bg">
-            <div class="color-blob blob-1"></div>
-            <div class="color-blob blob-2"></div>
-        </div>
-        <h1>GET IN TOUCH</h1>
-        <p>Have questions about our hygiene solutions or need a custom quote? Our team is ready to assist you in
-            creating a cleaner, better workspace.</p>
-    </section>
-
     <!-- Contact Page Content -->
     <div class="contact-page-content">
-        <!-- Contact Us Section (Reused from Index) -->
-        <section id="contact-us" class="contact-section">
-            <div class="contact-container" style="padding-top: 0;">
-                <!-- Left Side: Contact Info -->
-                <div class="contact-info">
-                    <div class="section-header" style="text-align: left; margin-bottom: 32px;">
-                        <span class="eyebrow" style="color: #0066CC;">WE ARE HERE TO HELP</span>
-                        <div class="sparkle-container">
-                            <h2 style="font-size: 32px; margin-bottom: 0;">OUR DETAILS</h2>
-                            <svg class="sparkle-svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
-                                </path>
-                            </svg>
+        <div class="contact-container">
+            <div class="contact-info reveal reveal-left">
+                <span class="eyebrow">Get In Touch</span>
+                <h2>Our Contact Details</h2>
+                <p>We provide comprehensive hygiene support for corporate, industrial, and shared spaces. Choose your preferred way to connect with our specialists.</p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="info-text">
+                            <h4>Head Office</h4>
+                            <p>No.158, West Avenue Road, Muthamil Nagar, Chennai-600 118</p>
                         </div>
                     </div>
-                    <p>Reach out through any of the channels below. We typically respond within 24 business hours.</p>
-
-                    <div class="info-list">
-                        <div class="info-item">
-                            <div class="icon-circle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                            </div>
-                            <div class="info-text">
-                                <h4>Our Location</h4>
-                                <p>No.158,West Avenue Road,Muthamil Nagar,Kodungaiyur,chennai-600 118</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="icon-circle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="info-text">
-                                <h4>Call Us</h4>
-                                <p>+91 9884457996 (Main Office)<br>+91 9884457996 (Customer Support)</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="icon-circle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <div class="info-text">
-                                <h4>Email Us</h4>
-                                <p>order@classictraders.co.in<br>support@cttraders.com</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="icon-circle">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </div>
-                            <div class="info-text">
-                                <h4>Business Hours</h4>
-                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
-                            </div>
+                    <div class="info-item">
+                        <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                        <div class="info-text">
+                            <h4>Support Line</h4>
+                            <p>+91 98844 57996<br>+91 79960 77797</p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Right Side: Enquiry Form -->
-                <div class="contact-form-container">
-                    <form class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" placeholder="Enter your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" placeholder="Enter your email" required>
-                            </div>
+                    <div class="info-item">
+                        <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-text">
+                            <h4>Email Us</h4>
+                            <p>order@classictraders.co.in</p>
                         </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" placeholder="Enter phone number">
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Interested In</label>
-                                <select id="service">
-                                    <option value="" disabled selected>Select a Service</option>
-                                    <option value="washroom">Washroom Hygiene</option>
-                                    <option value="pantry">Pantry Care</option>
-                                    <option value="scenting">Air Scenting</option>
-                                    <option value="general">Facility Cleaning</option>
-                                    <option value="other">Other Enquiry</option>
-                                </select>
-                            </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-circle"><i class="fa-solid fa-clock"></i></div>
+                        <div class="info-text">
+                            <h4>Hours</h4>
+                            <p>Mon - Fri: 9AM - 6PM<br>Sat: 10AM - 2PM</p>
                         </div>
-
-                        <div class="form-group full-width">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-solid btn-submit btn-magnetic">
-                            Send Enquiry
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <div class="contact-form-container reveal reveal-right">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+91 00000 00000">
+                        </div>
+                        <div class="form-group">
+                            <label>Interest</label>
+                            <select>
+                                <option>Washroom Hygiene</option>
+                                <option>Pantry Solutions</option>
+                                <option>Scenting Units</option>
+                                <option>General Maintenance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Message</label>
+                        <textarea rows="5" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit btn-magnetic">Send Message</button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <!-- Footer Section -->
     <footer class="main-footer">
         <div class="footer-container">
-            <!-- Column 1: Brand Info -->
             <div class="footer-col brand-col">
                 <a href="index.html" class="footer-logo">
                     <img src="assets/images/logo.jpg" alt="CT Traders Logo">
                 </a>
-                <p class="footer-desc">Elevating hygiene standards for modern workplaces. We provide premium facility
-                    solutions tailored for excellence and well-being.</p>
+                <p class="footer-desc">Elevating hygiene standards for modern workplaces. We provide premium facility solutions tailored for excellence and well-being.</p>
                 <div class="social-links">
-                    <a href="https://wa.me/919876543210" aria-label="WhatsApp" target="_blank">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="tel:+919876543210" aria-label="Call Us">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                            </path>
-                        </svg>
-                    </a>
+                    <a href="https://wa.me/919884457996" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="tel:+919884457996" aria-label="Call Us"><i class="fa-solid fa-phone"></i></a>
                 </div>
             </div>
-
-            <!-- Column 2: Quick Links -->
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -282,8 +193,6 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-
-            <!-- Column 3: Services -->
             <div class="footer-col">
                 <h3>Our Services</h3>
                 <ul class="footer-links">
@@ -291,11 +200,8 @@
                     <li><a href="pantry-care.html">Pantry Care</a></li>
                     <li><a href="scent-machines.html">Scent Machines</a></li>
                     <li><a href="floorgeneral.html">Floor & General Care</a></li>
-
                 </ul>
             </div>
-
-            <!-- Column 4: Contact Info -->
             <div class="footer-col">
                 <h3>Contact Us</h3>
                 <div class="footer-contact">
@@ -305,7 +211,6 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p>&copy; 2026 Classic Traders Hygiene Solutions. All rights reserved.</p>
@@ -317,54 +222,160 @@
         </div>
     </footer>
 
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="index.html" class="bottom-nav-item" id="navHome">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <button class="bottom-nav-item" id="bottomNavCategory">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <span>Category</span>
+        </button>
+
+        <a href="https://wa.me/919884457996" class="bottom-nav-item" id="navWhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <button class="bottom-nav-item" id="bottomNavMore">
+            <i class="fa-solid fa-bars"></i>
+            <span>More</span>
+        </button>
+    </nav>
+
+    <!-- Categories Drawer -->
+    <div class="bottom-more-overlay" id="categoryOverlay"></div>
+    <div class="bottom-more-drawer" id="categoryDrawer">
+        <div class="bottom-more-header">
+            <span>Explore Categories</span>
+            <button class="bottom-more-close" id="categoryClose">&times;</button>
+        </div>
+        <nav class="bottom-more-content">
+            <div class="drawer-section">
+                <h4>Washroom Care</h4>
+                <div class="drawer-grid">
+                    <a href="washroom-care.html" class="drawer-link">Toilet Cleaning</a>
+                    <a href="washroom-care.html" class="drawer-link">Urinal Care</a>
+                    <a href="washroom-care.html" class="drawer-link">Air Freshners</a>
+                </div>
+            </div>
+            <div class="drawer-section">
+                <h4>Pantry Care</h4>
+                <div class="drawer-grid">
+                    <a href="pantry-care.html" class="drawer-link">Vessel Cleaners</a>
+                    <a href="pantry-care.html" class="drawer-link">Tissue Products</a>
+                </div>
+            </div>
+            <div class="drawer-section">
+                <h4>Floor & General</h4>
+                <div class="drawer-grid">
+                    <a href="floorgeneral.html" class="drawer-link">Floor Cleaning</a>
+                    <a href="floorgeneral.html" class="drawer-link">General Care</a>
+                    <a href="floorgeneral.html" class="drawer-link">Waste Mgt</a>
+                </div>
+            </div>
+            <div class="drawer-section">
+                <h4>Scent Machines</h4>
+                <div class="drawer-grid">
+                    <a href="scent-machines.html" class="drawer-link">Wall Mounted</a>
+                    <a href="scent-machines.html" class="drawer-link">Floor Standing</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- More Options Drawer -->
+    <div class="bottom-more-overlay" id="moreOverlay"></div>
+    <div class="bottom-more-drawer" id="moreDrawer">
+        <div class="bottom-more-header">
+            <span>Menu Options</span>
+            <button class="bottom-more-close" id="moreClose">&times;</button>
+        </div>
+        <nav class="bottom-more-content">
+            <div class="drawer-section">
+                <h4>Company & Links</h4>
+                <div class="drawer-grid">
+                    <a href="allproducts.html" class="drawer-link">View All Products</a>
+                    <a href="assets/downloads/brochure.pdf" class="drawer-link" download>Download Brochure</a>
+                    <a href="index.html#about-us" class="drawer-link">About Us</a>
+                    <a href="contact.html" class="drawer-link">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
     <script>
-        // First-time visitor logic for the top banner
-        const topBanner = document.querySelector('.top-banner');
-        if (!localStorage.getItem('hasVisitedBefore')) {
-            topBanner.style.display = 'flex';
-            localStorage.setItem('hasVisitedBefore', 'true');
-        }
-
-        // Initialize features on DOM Load
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Navigation Elements
-            const mobileNavToggle = document.getElementById('mobileNavToggle');
-            const mobileNavClose = document.getElementById('mobileNavClose');
-            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-            const navbarCenter = document.getElementById('navbarCenter');
+            const bottomNavCategory = document.getElementById('bottomNavCategory');
+            const bottomNavMore = document.getElementById('bottomNavMore');
+            
+            const categoryDrawer = document.getElementById('categoryDrawer');
+            const categoryOverlay = document.getElementById('categoryOverlay');
+            const categoryClose = document.getElementById('categoryClose');
+            
+            const moreDrawer = document.getElementById('moreDrawer');
+            const moreOverlay = document.getElementById('moreOverlay');
+            const moreClose = document.getElementById('moreClose');
 
-            const toggleMobileMenu = (isOpen) => {
-                navbarCenter.classList.toggle('active', isOpen);
-                mobileNavOverlay.classList.toggle('active', isOpen);
-                document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+            if (bottomNavCategory && categoryDrawer && categoryOverlay) {
+                const openCategory = () => {
+                    categoryOverlay.classList.add('active');
+                    categoryDrawer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeCategory = () => {
+                    categoryOverlay.classList.remove('active');
+                    categoryDrawer.classList.remove('active');
+                    document.body.style.overflow = '';
+                };
+                
+                const newCatBtn = bottomNavCategory.cloneNode(true);
+                bottomNavCategory.parentNode.replaceChild(newCatBtn, bottomNavCategory);
+                newCatBtn.addEventListener('click', openCategory);
+                
+                if (categoryClose) categoryClose.addEventListener('click', closeCategory);
+                if (categoryOverlay) categoryOverlay.addEventListener('click', closeCategory);
+            }
+
+            if (bottomNavMore && moreDrawer && moreOverlay) {
+                const openMore = () => {
+                    moreOverlay.classList.add('active');
+                    moreDrawer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeMore = () => {
+                    moreOverlay.classList.remove('active');
+                    moreDrawer.classList.remove('active');
+                    document.body.style.overflow = '';
+                };
+                
+                const newMoreBtn = bottomNavMore.cloneNode(true);
+                bottomNavMore.parentNode.replaceChild(newMoreBtn, bottomNavMore);
+                newMoreBtn.addEventListener('click', openMore);
+                
+                if (moreClose) moreClose.addEventListener('click', closeMore);
+                if (moreOverlay) moreOverlay.addEventListener('click', closeMore);
+            }
+
+            // Active state based on current URL
+            const currentPath = window.location.pathname;
+            const fileName = currentPath.split('/').pop() || 'index.html';
+            
+                        const navItems = {
+                'index.html': 'navHome',
+                'allproducts.html': 'bottomNavCategory',
+                'washroom-care.html': 'bottomNavCategory',
+                'pantry-care.html': 'bottomNavCategory',
+                'floorgeneral.html': 'bottomNavCategory',
+                'scent-machines.html': 'bottomNavCategory'
             };
 
-            if (mobileNavToggle) mobileNavToggle.addEventListener('click', () => toggleMobileMenu(true));
-            if (mobileNavClose) mobileNavClose.addEventListener('click', () => toggleMobileMenu(false));
-            if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', () => toggleMobileMenu(false));
-
-            // Close menu when clicking nav links
-            const navLinks = navbarCenter.querySelectorAll('.nav-item:not(.has-dropdown)');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => toggleMobileMenu(false));
-            });
-
-
-            // Magnetic Button Effect Logic
-            const magneticButtons = document.querySelectorAll('.btn-magnetic');
-            magneticButtons.forEach(btn => {
-                btn.addEventListener('mousemove', (e) => {
-                    const position = btn.getBoundingClientRect();
-                    const x = e.pageX - position.left - position.width / 2;
-                    const y = e.pageY - position.top - position.height / 2 - window.scrollY;
-                    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-                    btn.style.transition = 'none';
-                });
-                btn.addEventListener('mouseleave', () => {
-                    btn.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-                    btn.style.transform = 'translate(0px, 0px)';
-                });
-            });
+            const activeId = navItems[fileName];
+            if (activeId) {
+                const element = document.getElementById(activeId);
+                if (element) element.classList.add('active');
+            }
         });
     </script>
 </body>

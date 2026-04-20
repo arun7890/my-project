@@ -74,18 +74,22 @@
             </div>
         </nav>
 
-        <div class="navbar-right">
+                <div class="navbar-right">
+            <!-- Mobile-only contact block -->
+            <a href="tel:+917996077797" class="mobile-contact-pill" aria-label="Call Us">
+                <div class="mobile-contact-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="mobile-contact-text">
+                    <span class="mobile-contact-label">REACH US</span>
+                    <span class="mobile-contact-number">+91 79960 77797</span>
+                </div>
+            </a>
             <a href="contact.html" class="btn btn-solid btn-magnetic" style="text-decoration: none;">Contact Us</a>
             <a href="assets/Classic Traders Profile.pdf" download="ct_traders_brochure.pdf"
                 class="btn btn-outline btn-magnetic" style="text-decoration: none;">Download Brochure</a>
-            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
         </div>
     </header>
 
@@ -93,12 +97,12 @@
     <div class="shop-header fade-in-up">
         <div class="container">
             <h1 class="shop-title">Floor & General Care</h1>
-            <p class="shop-desc">Discover our extensive range of floor and general cleaning products, perfect
-                for both retail and wholesale buyers.</p>
+            <p class="shop-desc">Comprehensive solutions for pristine flooring and everyday industrial maintenance.</p>
             <div class="search-controls">
                 <div class="search-input-wrapper">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="productSearch" class="search-input" placeholder="Search for products...">
+                    <input type="text" id="productSearch" class="search-input"
+                        placeholder="Search floor products...">
                 </div>
                 <div class="view-toggles">
                     <button class="view-btn active" id="btnGrid" title="Grid View"><i class="fas fa-th"></i></button>
@@ -120,158 +124,32 @@
             </div>
         </div>
     </div>
+
+
     <!-- =========================================================
          MAIN PRODUCTS GRID
          ========================================================= -->
     <div class="products-wrapper">
         <div class="container">
             <div class="products-layout">
-                <!-- Sidebar Removed: Categories now handled by horizontal sub-nav -->
-
-
                 <!-- Main Content -->
                 <main class="products-main">
-                    <div class="results-count" id="resultsCount">Showing all products</div>
+                    <div class="results-count" id="resultsCount">Showing all floor/general products</div>
                     <div class="row g-4" id="productsGrid">
 
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
-                            data-category="floor-cleaning" data-name="easy mop set 2ft">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/images/easy_mop.png" alt="Easy Mop Set 2ft">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Easy Mop Set 2ft</h3>
-                                    <p class="product-desc">Professional-grade mop with extendable 2ft handle.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
-                            data-category="floor-cleaning" data-name="mop refill 300g">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/images/mop_refill.png" alt="Mop Refill 300g">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Mop Refill 300g</h3>
-                                    <p class="product-desc">High-absorbency 300g replacement yarn for commercial
-                                        mopping.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
-                            data-category="floor-cleaning" data-name="floor wiper">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/images/floor_wiper2.png" alt="Floor Wiper">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Floor Wiper</h3>
-                                    <p class="product-desc">Durable rubber blade floor wiper for fast water removal.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
+                        <!-- =============================================
+                     PRODUCTS
+                     ============================================= -->
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up"
-                            data-category="floor-cleaning" data-name="floor brush">
+                            data-category="floor-cleaning" data-name="phenyl concentrate 1:10">
                             <div class="product-card">
                                 <div class="product-img-wrapper">
-                                    <img src="assets/images/soft_broom.png" alt="Floor Brush">
+                                    <img src="assets/images/phenyl_concentrate.png" alt="Phenyl Concentrate 1:10">
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-title">Floor Brush</h3>
-                                    <p class="product-desc">Hard-bristle scrubbing brush designed for rigorous surfaces.
-                                    </p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-100"
-                            data-category="floor-cleaning" data-name="pvc bucket">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/images/pvc_bucket.png" alt="PVC Bucket">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">PVC Bucket</h3>
-                                    <p class="product-desc">Industrial strength heavy-duty PVC bucket for harsh
-                                        chemicals.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-200"
-                            data-category="general-care" data-name="floor mat">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/images/floor_mat.png" alt="Floor Mat">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Floor Mat</h3>
-                                    <p class="product-desc">Anti-slip quality floor mat for professional entryways.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
-                            data-category="general-care" data-name="wash basin wiper">
-                            <div class="product-card">
-                                <div class="product-img-wrapper"><img src="assets/images/floor_wiper2.png"
-                                        alt="Wash Basin Wiper"></div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Wash Basin Wiper</h3>
-                                    <p class="product-desc">Compact rubber wiper designed for wash basins and
-                                        countertops.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up"
-                            data-category="general-care" data-name="dust pan">
-                            <div class="product-card">
-                                <div class="product-img-wrapper"><img src="assets/images/dust_pan.png" alt="Dust Pan">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Dust Pan</h3>
-                                    <p class="product-desc">Wide-mouth commercial plastic dust pan.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up delay-300"
-                            data-category="floor-cleaning" data-name="fabian disinfectant floor cleaner">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/images/disinfectant_cleaner.png"
-                                        alt="Fabian Disinfectant Floor Cleaner">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Fabian Disinfectant Floor Cleaner</h3>
-                                    <p class="product-desc">Hospital-grade concentrated formula for maximum hygiene.</p>
-                                    <button class="btn btn-quote">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item fade-in-up"
-                            data-category="general-care" data-name="fabian glass cleaner">
-                            <div class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/images/glass_cleaner.png" alt="Fabian Glass Cleaner">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-title">Fabian Glass Cleaner</h3>
-                                    <p class="product-desc">Streak-free window and mirror treatment spray.</p>
+                                    <h3 class="product-title">Phenyl Concentrate 1:10</h3>
+                                    <p class="product-desc">High-strength disinfecting concentrate for white phenyl
+                                        production.</p>
                                     <button class="btn btn-quote">Learn More</button>
                                 </div>
                             </div>
@@ -386,7 +264,7 @@
                                 </div>
                                 <div class="product-info">
                                     <h3 class="product-title">Garbage Cover</h3>
-                                    <p class="product-desc">Available in Small, Medium, Large &amp; XL Jumbo sizes.</p>
+                                    <p class="product-desc">Available in Small, Medium, Large & XL Jumbo sizes.</p>
                                     <button class="btn btn-quote">Learn More</button>
                                 </div>
                             </div>
@@ -471,6 +349,162 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+                
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="index.html" class="bottom-nav-item" id="navHome">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <button class="bottom-nav-item" id="bottomNavCategory">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <span>Category</span>
+        </button>
+
+        <a href="https://wa.me/919884457996" class="bottom-nav-item" id="navWhatsApp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <button class="bottom-nav-item" id="bottomNavMore">
+            <i class="fa-solid fa-bars"></i>
+            <span>More</span>
+        </button>
+    </nav>
+
+    <!-- Categories Drawer -->
+    <div class="bottom-more-overlay" id="categoryOverlay"></div>
+    <div class="bottom-more-drawer" id="categoryDrawer">
+        <div class="bottom-more-header">
+            <span>Explore Categories</span>
+            <button class="bottom-more-close" id="categoryClose">&times;</button>
+        </div>
+        <nav class="bottom-more-content">
+            <div class="drawer-section">
+                <h4>Washroom Care</h4>
+                <div class="drawer-grid">
+                    <a href="washroom-care.html" class="drawer-link">Toilet Cleaning</a>
+                    <a href="washroom-care.html" class="drawer-link">Urinal Care</a>
+                    <a href="washroom-care.html" class="drawer-link">Air Freshners</a>
+                </div>
+            </div>
+            <div class="drawer-section">
+                <h4>Pantry Care</h4>
+                <div class="drawer-grid">
+                    <a href="pantry-care.html" class="drawer-link">Vessel Cleaners</a>
+                    <a href="pantry-care.html" class="drawer-link">Tissue Products</a>
+                </div>
+            </div>
+            <div class="drawer-section">
+                <h4>Floor & General</h4>
+                <div class="drawer-grid">
+                    <a href="floorgeneral.html" class="drawer-link">Floor Cleaning</a>
+                    <a href="floorgeneral.html" class="drawer-link">General Care</a>
+                    <a href="floorgeneral.html" class="drawer-link">Waste Mgt</a>
+                </div>
+            </div>
+            <div class="drawer-section">
+                <h4>Scent Machines</h4>
+                <div class="drawer-grid">
+                    <a href="scent-machines.html" class="drawer-link">Wall Mounted</a>
+                    <a href="scent-machines.html" class="drawer-link">Floor Standing</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- More Options Drawer -->
+    <div class="bottom-more-overlay" id="moreOverlay"></div>
+    <div class="bottom-more-drawer" id="moreDrawer">
+        <div class="bottom-more-header">
+            <span>Menu Options</span>
+            <button class="bottom-more-close" id="moreClose">&times;</button>
+        </div>
+        <nav class="bottom-more-content">
+            <div class="drawer-section">
+                <h4>Company & Links</h4>
+                <div class="drawer-grid">
+                    <a href="allproducts.html" class="drawer-link">View All Products</a>
+                    <a href="assets/downloads/brochure.pdf" class="drawer-link" download>Download Brochure</a>
+                    <a href="index.html#about-us" class="drawer-link">About Us</a>
+                    <a href="contact.html" class="drawer-link">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bottomNavCategory = document.getElementById('bottomNavCategory');
+            const bottomNavMore = document.getElementById('bottomNavMore');
+            
+            const categoryDrawer = document.getElementById('categoryDrawer');
+            const categoryOverlay = document.getElementById('categoryOverlay');
+            const categoryClose = document.getElementById('categoryClose');
+            
+            const moreDrawer = document.getElementById('moreDrawer');
+            const moreOverlay = document.getElementById('moreOverlay');
+            const moreClose = document.getElementById('moreClose');
+
+            if (bottomNavCategory && categoryDrawer && categoryOverlay) {
+                const openCategory = () => {
+                    categoryOverlay.classList.add('active');
+                    categoryDrawer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeCategory = () => {
+                    categoryOverlay.classList.remove('active');
+                    categoryDrawer.classList.remove('active');
+                    document.body.style.overflow = '';
+                };
+                
+                const newCatBtn = bottomNavCategory.cloneNode(true);
+                bottomNavCategory.parentNode.replaceChild(newCatBtn, bottomNavCategory);
+                newCatBtn.addEventListener('click', openCategory);
+                
+                if (categoryClose) categoryClose.addEventListener('click', closeCategory);
+                if (categoryOverlay) categoryOverlay.addEventListener('click', closeCategory);
+            }
+
+            if (bottomNavMore && moreDrawer && moreOverlay) {
+                const openMore = () => {
+                    moreOverlay.classList.add('active');
+                    moreDrawer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                };
+                const closeMore = () => {
+                    moreOverlay.classList.remove('active');
+                    moreDrawer.classList.remove('active');
+                    document.body.style.overflow = '';
+                };
+                
+                const newMoreBtn = bottomNavMore.cloneNode(true);
+                bottomNavMore.parentNode.replaceChild(newMoreBtn, bottomNavMore);
+                newMoreBtn.addEventListener('click', openMore);
+                
+                if (moreClose) moreClose.addEventListener('click', closeMore);
+                if (moreOverlay) moreOverlay.addEventListener('click', closeMore);
+            }
+
+            // Active state based on current URL
+            const currentPath = window.location.pathname;
+            const fileName = currentPath.split('/').pop() || 'index.html';
+            
+                        const navItems = {
+                'index.html': 'navHome',
+                'allproducts.html': 'bottomNavCategory',
+                'washroom-care.html': 'bottomNavCategory',
+                'pantry-care.html': 'bottomNavCategory',
+                'floorgeneral.html': 'bottomNavCategory',
+                'scent-machines.html': 'bottomNavCategory'
+            };
+
+            const activeId = navItems[fileName];
+            if (activeId) {
+                const element = document.getElementById(activeId);
+                if (element) element.classList.add('active');
+            }
+        });
+    </script>
 </body>
 
 </html>

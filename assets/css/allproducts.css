@@ -18,7 +18,7 @@ html {
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #f8fafc;
-    background-image: 
+    background-image:
         radial-gradient(at 0% 0%, rgba(224, 36, 36, 0.05) 0px, transparent 50%),
         radial-gradient(at 100% 0%, rgba(224, 36, 36, 0.02) 0px, transparent 50%);
     color: var(--text-dark);
@@ -57,7 +57,7 @@ body {
     font-weight: 500;
 }
 
-/* Search Container — Pill Capsule Style */
+/* Search Container â€” Pill Capsule Style */
 .search-controls {
     max-width: 620px;
     margin: 0 auto;
@@ -127,12 +127,13 @@ body {
 }
 
 .view-btn.active {
-    background-color: #d90429; /* Matches the vibrant red in the image */
+    background-color: #d90429;
+    /* Matches the vibrant red in the image */
     color: var(--white);
     box-shadow: 0 4px 15px rgba(217, 4, 41, 0.3);
 }
 
-/* ─────── Two-level navigation ─────── */
+/* â”€â”€â”€â”€â”€â”€â”€ Two-level navigation â”€â”€â”€â”€â”€â”€â”€ */
 .main-nav {
     position: sticky;
     top: 0;
@@ -191,7 +192,8 @@ body {
     gap: 12px;
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding-left: 15px; /* Slight padding to align with results count */
+    padding-left: 15px;
+    /* Slight padding to align with results count */
 }
 
 .sub-nav-pill {
@@ -227,10 +229,11 @@ body {
 .results-count {
     font-size: 0.95rem;
     color: var(--text-muted);
-    margin: 60px 0 35px; /* Increased top margin to put down the results */
+    margin: 60px 0 35px;
+    /* Increased top margin to put down the results */
     font-weight: 500;
     padding-left: 15px;
-    border-left: 4px solid #eaeaea; 
+    border-left: 4px solid #eaeaea;
 }
 
 /* Product Card - Clean Model */
@@ -374,7 +377,7 @@ body {
     padding: 5px 0;
     margin-top: 10px;
     display: none;
-    /* Hidden by default — JS shows them only when a specific category is active */
+    /* Hidden by default â€” JS shows them only when a specific category is active */
 }
 
 .section-header {
@@ -575,7 +578,8 @@ body {
 }
 
 .btn-send-enquiry {
-    background-color: #9b1c1c; /* Darker red matching the design */
+    background-color: #9b1c1c;
+    /* Darker red matching the design */
     color: #fff;
     border: none;
     width: 100%;
@@ -598,6 +602,7 @@ body {
     .contact-form .half-width {
         width: 100%;
     }
+
     .contact-modal {
         padding: 25px;
     }
@@ -718,20 +723,20 @@ body {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .product-sidebar {
         flex: none;
         position: static;
         width: 100%;
     }
-    
+
     .filter-pills {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 10px;
         justify-content: center;
     }
-    
+
     .filter-pill {
         width: auto;
         padding: 9px 20px;
@@ -751,10 +756,221 @@ body {
     display: flex;
     align-items: center;
 }
+
 .filter-subtitle::after {
     content: "";
     flex-grow: 1;
     height: 1px;
     background: #f0f0f0;
     margin-left: 10px;
+}
+
+/* Global Hide for Mobile-only elements on Desktop */
+.mobile-bottom-nav,
+.bottom-more-overlay,
+.bottom-more-drawer { display: none; }
+
+/* Mobile-only Contact Pill Styles */
+.mobile-contact-pill {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: rgba(153, 27, 27, 0.06);
+    border: 1px solid rgba(153, 27, 27, 0.15);
+    border-radius: 50px;
+    padding: 6px 14px 6px 10px;
+    transition: all 0.2s ease;
+}
+
+.mobile-contact-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #991b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mobile-contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-contact-label {
+    font-size: 9px;
+    font-weight: 800;
+    color: #991b1b;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.mobile-contact-number {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111111;
+    line-height: 1.1;
+}
+
+
+
+
+
+/* Fixed Mobile Responsive Rules */
+
+@media (max-width: 900px) {
+
+    /* Navbar & Contacts */
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar-center,
+    .navbar-right,
+    .header-contact-block,
+    .mobile-nav-close {
+        display: none !important;
+    }
+
+    .mobile-nav-toggle,
+    .mobile-contact-pill {
+        display: flex !important;
+    }
+
+    /* Grid & Layout Fixes */
+    .product-grid,
+    .categories-grid,
+    .clients-grid,
+    .footer-container {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+
+    .about-container,
+    .contact-container,
+    .hero-split,
+    .products-layout {
+        flex-direction: column !important;
+        gap: 40px;
+    }
+
+    .hero-image {
+        height: 350px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .hero-content {
+        padding: 40px 6%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    /* Mobile Bottom Navigation (Pill Design) */
+    .mobile-bottom-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 75px;
+        background: #f1f5f9 !important;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 5000;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 0 10px;
+    }
+
+    .bottom-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        text-decoration: none;
+        color: #64748b !important;
+        font-size: 11px;
+        font-weight: 700 !important;
+        background: none;
+        border: none;
+        flex: 1;
+        height: 100%;
+    }
+
+    .bottom-nav-item i {
+        font-size: 20px;
+    }
+
+    .bottom-nav-item.active {
+        background: #ffffff !important;
+        color: #0369a1 !important;
+        border-radius: 16px;
+        height: 80%;
+        margin: 0 5px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
+
+    .bottom-nav-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: 6px;
+        width: 4px;
+        height: 4px;
+        background-color: #0369a1;
+        border-radius: 50%;
+    }
+
+    .bottom-more-drawer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff !important;
+        display: none;
+        z-index: 6000;
+        border-radius: 24px 24px 0 0;
+        padding: 24px;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .bottom-more-drawer.active {
+        display: block !important;
+    }
+
+    .bottom-more-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        font-weight: 800;
+        color: #111;
+        font-size: 18px;
+    }
+
+    .bottom-more-links a {
+        display: flex !important;
+        align-items: center;
+        color: #1e293b !important;
+        font-weight: 600 !important;
+        padding: 15px 18px !important;
+        text-decoration: none;
+        border-radius: 14px;
+        margin-bottom: 6px;
+    }
+
+    .bottom-more-links a i {
+        color: #0369a1 !important;
+        margin-right: 14px !important;
+        width: 24px;
+        text-align: center;
+    }
 }
