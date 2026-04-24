@@ -55,6 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.forEach(link => {
             link.addEventListener('click', () => toggleMobileMenu(false));
         });
+
+        const dropdowns = navbarCenter.querySelectorAll('.nav-item.has-dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                // Prevent click from propagating if they click a link inside
+                if(e.target.tagName.toLowerCase() === 'a') return;
+                dropdown.classList.toggle('active');
+            });
+        });
     }
 
     // ─── Magnetic Button Effect ───────────────────────────────────────────────
@@ -227,6 +236,18 @@ document.addEventListener('DOMContentLoaded', () => {
             filterProducts();
         });
     }
+
+    // ─── Mobile Drawer Accordion ──────────────────────────────────────────────
+    document.querySelectorAll('.drawer-section h4').forEach(header => {
+        header.addEventListener('click', () => {
+            const section = header.parentElement;
+            // Optionally close others
+            // document.querySelectorAll('.drawer-section').forEach(s => {
+            //     if(s !== section) s.classList.remove('active');
+            // });
+            section.classList.toggle('active');
+        });
+    });
 
     // ─── Boot ─────────────────────────────────────────────────────────────────
     filterProducts();

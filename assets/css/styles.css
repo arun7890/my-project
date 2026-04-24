@@ -1097,8 +1097,17 @@ body {
         overflow: hidden;
     }
 
-    .nav-item.has-dropdown:hover .dropdown-menu {
+    .nav-item.has-dropdown:hover .dropdown-menu,
+    .nav-item.has-dropdown.active .dropdown-menu {
         max-height: 500px;
+    }
+
+    .nav-item.has-dropdown .chevron {
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item.has-dropdown.active .chevron {
+        transform: rotate(180deg);
     }
 
     .navbar-right .btn-outline,
@@ -1285,12 +1294,39 @@ body {
     letter-spacing: 1.2px;
     margin-bottom: 15px;
     padding-left: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drawer-section h4::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: #991b1b;
+}
+
+.drawer-section.active h4::after {
+    transform: rotate(180deg);
 }
 
 .drawer-grid {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+}
+
+.drawer-section.active .drawer-grid {
+    display: grid;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .drawer-link {
@@ -1580,3 +1616,4 @@ body {
 .form-group label {
     padding-left: 2px !important; /* Anchor label more strictly to the left edge */
 }
+
