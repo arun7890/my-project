@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/product-detail.css">
 </head>
 
 <body>
@@ -75,145 +76,207 @@
         </nav>
 
         <div class="navbar-right">
-            <a href="tel:+917996077797" class="mobile-contact-pill" aria-label="Call Us">
-                <div class="mobile-contact-icon">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                </div>
-                <div class="mobile-contact-text">
-                    <span class="mobile-contact-label">REACH US</span>
-                    <span class="mobile-contact-number">+91 79960 77797</span>
-                </div>
-            </a>
-            <a href="contact.html" class="btn btn-solid btn-magnetic">Contact Us</a>
-            <a href="assets/Classic Traders Profile.pdf" download="ct_traders_brochure.pdf" class="btn btn-outline btn-magnetic">Download Brochure</a>
+            <a href="contact.html" class="btn btn-solid btn-magnetic" style="text-decoration: none;">Contact Us</a>
+            <a href="assets/Classic Traders Profile.pdf" download="ct_traders_brochure.pdf"
+                class="btn btn-outline btn-magnetic" style="text-decoration: none;">Download Brochure</a>
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <div class="detail-wrapper">
-        <div class="container">
-            <!-- Breadcrumbs -->
-            <nav class="breadcrumb-nav">
-                <a href="index.html">Home</a>
-                <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
-                <a href="allproducts.html">All Products</a>
-                <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
-                <span class="current" id="detail-title">Loading...</span>
-            </nav>
 
-            <div class="row g-5">
-                <!-- Left: Images -->
-                <div class="col-lg-6">
-                    <div class="product-gallery">
-                        <div class="main-image-container">
-                            <img src="" id="main-img" alt="Product Image">
-                        </div>
-                        <div class="thumbnails" id="thumb-list">
-                            <!-- JS will populate -->
-                        </div>
+    <div class="product-detail-page">
+        <div class="container">
+
+            <!-- Hero Section -->
+            <div class="product-hero">
+                <div class="product-gallery">
+                    <div class="main-image-container">
+                        <img id="main-img" src="" alt="">
+                    </div>
+                    <span class="color-label-tag">Select Color / Variant:</span>
+                    <div class="thumbnail-list" id="thumb-list">
+                        <!-- Color Frames go here -->
                     </div>
                 </div>
 
-                <!-- Right: Content -->
-                <div class="col-lg-6">
-                    <div class="product-summary">
-                        <div class="product-badge" id="meta-category">Category</div>
-                        <h1 class="main-title" id="tab-long-title">Product Name</h1>
-                        <p class="brand-tag">Brand: <span id="meta-brand">CT Standard</span></p>
+                <div class="product-main-info">
+                    <h1 class="product-title-detailed" id="detail-title">Product Name</h1>
+                    <p class="short-description" id="detail-short-desc">
+                        Professional grade cleaning solution designed for maximum efficiency and durability.
+                    </p>
 
-                        <div class="short-desc" id="detail-short-desc">
-                            Loading product information...
+                    <button class="btn-request-quote" id="btnRequestQuote">Request Quote</button>
+
+                    <div class="meta-info-table">
+                        <div class="meta-row">
+                            <span class="meta-label">Category:</span>
+                            <span class="meta-value" id="meta-category">Cleaning Duster</span>
                         </div>
-
-                        <div class="action-buttons">
-                            <button class="btn btn-solid btn-magnetic" id="btnRequestQuote">
-                                <i class="fa-solid fa-paper-plane"></i> Request A Quote
-                            </button>
-                            <a href="https://wa.me/919884457996" class="btn btn-outline btn-magnetic" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i> Chat On WhatsApp
-                            </a>
+                        <div class="meta-row">
+                            <span class="meta-label">Brand:</span>
+                            <span class="meta-value" id="meta-brand">3M</span>
                         </div>
+                    </div>
 
-                        <div class="trust-badges">
-                            <div class="trust-item"><i class="fa-solid fa-check"></i> Quality Assured</div>
-                            <div class="trust-item"><i class="fa-solid fa-truck-fast"></i> Fast Delivery</div>
-                            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> 100% Genuine</div>
+                    <div class="share-section">
+                        <span class="share-label">Share:</span>
+                        <div class="share-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Tabs Section -->
-            <div class="product-tabs-container">
-                <div class="tab-header">
-                    <button class="tab-link active" data-tab="description">SPECIFICATIONS</button>
-                    <button class="tab-link" data-tab="details">ABOUT PRODUCT</button>
-                </div>
-                <div class="tab-content" id="description">
-                    <table class="spec-table">
-                        <tbody id="detail-spec-table">
-                            <!-- JS will populate -->
-                        </tbody>
-                    </table>
-                </div>
-                <div class="tab-content hidden" id="details">
-                    <div class="long-description" id="tab-long-desc">
-                        <!-- JS will populate -->
+            <div class="product-tabs">
+                <ul class="nav nav-tabs" id="productTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
+                            data-bs-target="#description" type="button" role="tab">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="additional-tab" data-bs-toggle="tab" data-bs-target="#additional"
+                            type="button" role="tab">Additional Information</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="productTabContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <div class="tab-content-inner">
+                            <h3 id="tab-long-title">Product Name</h3>
+                            <div id="tab-long-desc"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="additional" role="tabpanel">
+                        <div class="tab-content-inner">
+                            <table class="spec-table w-100" id="detail-spec-table"></table>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Related Products Carousel -->
-            <div class="related-products-section">
-                <div class="section-header">
+            <!-- Related Products - Exact Model Match -->
+            <div class="related-section">
+                <div class="related-title-box">
                     <h2>Related Products</h2>
-                    <div class="nav-arrows">
-                        <button class="arrow-btn" id="carousel-prev"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button class="arrow-btn" id="carousel-next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="related-carousel-outer">
+                    <div class="carousel-btn prev" id="carousel-prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="carousel-track-wrapper">
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- Slides go here via JS -->
+                        </div>
+                    </div>
+                    <div class="carousel-btn next" id="carousel-next"><i class="fas fa-chevron-right"></i></div>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <!-- Dots go here -->
                     </div>
                 </div>
-                <div class="related-carousel-viewport">
-                    <div class="related-carousel-track" id="carousel-track">
-                        <!-- JS will populate -->
-                    </div>
-                </div>
-                <div class="carousel-dots" id="carousel-dots"></div>
             </div>
+
         </div>
     </div>
 
-    <!-- Request Quote Modal -->
-    <div class="contact-modal-overlay" id="contactModalOverlay">
+    <!-- Floating Bubble -->
+    <div class="contact-bubble" id="floatingContact">
+        <div class="bubble-text">Contact us</div>
+        <div class="bubble-icon"
+            style="color: var(--primary-red); width:35px; height:35px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #eee;">
+            <i class="fas fa-comment"></i>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal Overlay -->
+    <div class="modal-overlay" id="contactModalOverlay">
         <div class="contact-modal">
-            <button class="close-modal" id="closeModal">&times;</button>
-            <div class="modal-left">
-                <h3>Request A Free Quote</h3>
-                <p>Submit your details and our hygiene experts will contact you shortly with a personalized proposal.</p>
-                <form class="modal-form">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="tel" placeholder="Phone Number" required>
-                    <textarea rows="4" placeholder="Your requirements..."></textarea>
-                    <button type="submit" class="btn btn-solid">Submit Request</button>
-                </form>
-            </div>
+            <button class="modal-close" id="closeModal">&times;</button>
+            <form class="contact-form">
+                <div class="row">
+                    <div class="form-group half-width">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="emailAddress">Email Address</label>
+                        <input type="email" id="emailAddress" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group half-width">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="interest">Interested In</label>
+                        <select id="interest">
+                            <option selected disabled>Select a Service</option>
+                            <option>Cleaning Services</option>
+                            <option>Product Inquiry</option>
+                            <option>Wholesale Order</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group full-width">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="How can we help you?"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-send-enquiry">Send Enquiry</button>
+            </form>
         </div>
     </div>
 
+    <!-- Footer Section -->
     <footer class="main-footer">
         <div class="footer-container">
+            <!-- Column 1: Brand Info -->
             <div class="footer-col brand-col">
                 <a href="index.html" class="footer-logo">
                     <img src="assets/images/logo.jpg" alt="CT Traders Logo">
                 </a>
-                <p class="footer-desc">Elevating hygiene standards for modern workplaces. We provide premium facility solutions tailored for excellence and well-being.</p>
+                <p class="footer-desc">Elevating hygiene standards for modern workplaces. We provide premium facility
+                    solutions tailored for excellence and well-being.</p>
                 <div class="social-links">
-                    <a href="https://wa.me/919884457996" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="tel:+919884457996" aria-label="Call Us"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://wa.me/919884457996" aria-label="WhatsApp" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="tel:+919884457996" aria-label="Call Us">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
             </div>
+
+            <!-- Column 2: Quick Links -->
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -224,6 +287,8 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
+
+            <!-- Column 3: Services -->
             <div class="footer-col">
                 <h3>Our Services</h3>
                 <ul class="footer-links">
@@ -233,6 +298,8 @@
                     <li><a href="floorgeneral.html">Floor & General Care</a></li>
                 </ul>
             </div>
+
+            <!-- Column 4: Contact Info -->
             <div class="footer-col">
                 <h3>Contact Us</h3>
                 <div class="footer-contact">
@@ -242,6 +309,7 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p>&copy; 2026 Classic Traders Hygiene Solutions. All rights reserved.</p>
@@ -404,19 +472,10 @@
                 });
             }
 
-            // Tab toggling
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.onclick = (e) => {
-                    document.querySelectorAll('.tab-link').forEach(l => l.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
-                    link.classList.add('active');
-                    document.getElementById(link.getAttribute('data-tab')).classList.remove('hidden');
-                };
-            });
-
             // Modal Logic
             const modalOverlay = document.getElementById('contactModalOverlay');
             const btnRequestQuote = document.getElementById('btnRequestQuote');
+            const floatingContact = document.getElementById('floatingContact');
             const closeModal = document.getElementById('closeModal');
 
             if (modalOverlay && btnRequestQuote) {
@@ -426,166 +485,26 @@
                 };
             }
 
+            if (floatingContact) {
+                floatingContact.onclick = () => {
+                    window.location.href = 'contact.html';
+                };
+            }
+
             if (closeModal) {
                 closeModal.onclick = () => {
                     modalOverlay.classList.remove('active');
                     document.body.style.overflow = '';
                 };
             }
-        });
-    </script>
 
-    <nav class="mobile-bottom-nav" id="mobileBottomNav">
-        <a href="index.html" class="bottom-nav-item" id="navHome">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-        </a>
-        <button class="bottom-nav-item" id="bottomNavCategory">
-            <i class="fa-solid fa-table-cells-large"></i>
-            <span>Category</span>
-        </button>
-
-        <a href="https://wa.me/919884457996" class="bottom-nav-item" id="navWhatsApp" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
-        <button class="bottom-nav-item" id="bottomNavMore">
-            <i class="fa-solid fa-bars"></i>
-            <span>More</span>
-        </button>
-    </nav>
-
-    <!-- Categories Drawer -->
-    <div class="bottom-more-overlay" id="categoryOverlay"></div>
-    <div class="bottom-more-drawer" id="categoryDrawer">
-        <div class="bottom-more-header">
-            <span>Explore Categories</span>
-            <button class="bottom-more-close" id="categoryClose">&times;</button>
-        </div>
-        <nav class="bottom-more-content">
-            <div class="drawer-section">
-                <h4>Washroom Care</h4>
-                <div class="drawer-grid">
-                    <a href="washroom-care.html" class="drawer-link">Toilet Cleaning</a>
-                    <a href="washroom-care.html" class="drawer-link">Urinal Care</a>
-                    <a href="washroom-care.html" class="drawer-link">Air Freshners</a>
-                </div>
-            </div>
-            <div class="drawer-section">
-                <h4>Pantry Care</h4>
-                <div class="drawer-grid">
-                    <a href="pantry-care.html" class="drawer-link">Vessel Cleaners</a>
-                    <a href="pantry-care.html" class="drawer-link">Tissue Products</a>
-                </div>
-            </div>
-            <div class="drawer-section">
-                <h4>Floor & General</h4>
-                <div class="drawer-grid">
-                    <a href="floorgeneral.html" class="drawer-link">Floor Cleaning</a>
-                    <a href="floorgeneral.html" class="drawer-link">General Care</a>
-                    <a href="floorgeneral.html" class="drawer-link">Waste Mgt</a>
-                </div>
-            </div>
-            <div class="drawer-section">
-                <h4>Scent Machines</h4>
-                <div class="drawer-grid">
-                    <a href="scent-machines.html" class="drawer-link">Wall Mounted</a>
-                    <a href="scent-machines.html" class="drawer-link">Floor Standing</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <!-- More Options Drawer -->
-    <div class="bottom-more-overlay" id="moreOverlay"></div>
-    <div class="bottom-more-drawer" id="moreDrawer">
-        <div class="bottom-more-header">
-            <span>Menu Options</span>
-            <button class="bottom-more-close" id="moreClose">&times;</button>
-        </div>
-        <nav class="bottom-more-content">
-            <div class="drawer-section">
-                <h4>Company & Links</h4>
-                <div class="drawer-grid">
-                    <a href="allproducts.html" class="drawer-link">View All Products</a>
-                    <a href="assets/downloads/brochure.pdf" class="drawer-link" download>Download Brochure</a>
-                    <a href="index.html#about-us" class="drawer-link">About Us</a>
-                    <a href="contact.html" class="drawer-link">Contact Us</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const bottomNavCategory = document.getElementById('bottomNavCategory');
-            const bottomNavMore = document.getElementById('bottomNavMore');
-            
-            const categoryDrawer = document.getElementById('categoryDrawer');
-            const categoryOverlay = document.getElementById('categoryOverlay');
-            const categoryClose = document.getElementById('categoryClose');
-            
-            const moreDrawer = document.getElementById('moreDrawer');
-            const moreOverlay = document.getElementById('moreOverlay');
-            const moreClose = document.getElementById('moreClose');
-
-            if (bottomNavCategory && categoryDrawer && categoryOverlay) {
-                const openCategory = () => {
-                    categoryOverlay.classList.add('active');
-                    categoryDrawer.classList.add('active');
-                    document.body.style.overflow = 'hidden';
+            if (modalOverlay) {
+                modalOverlay.onclick = (e) => {
+                    if (e.target === modalOverlay) {
+                        modalOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
                 };
-                const closeCategory = () => {
-                    categoryOverlay.classList.remove('active');
-                    categoryDrawer.classList.remove('active');
-                    document.body.style.overflow = '';
-                };
-                
-                const newCatBtn = bottomNavCategory.cloneNode(true);
-                bottomNavCategory.parentNode.replaceChild(newCatBtn, bottomNavCategory);
-                newCatBtn.addEventListener('click', openCategory);
-                
-                if (categoryClose) categoryClose.addEventListener('click', closeCategory);
-                if (categoryOverlay) categoryOverlay.addEventListener('click', closeCategory);
-            }
-
-            if (bottomNavMore && moreDrawer && moreOverlay) {
-                const openMore = () => {
-                    moreOverlay.classList.add('active');
-                    moreDrawer.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                };
-                const closeMore = () => {
-                    moreOverlay.classList.remove('active');
-                    moreDrawer.classList.remove('active');
-                    document.body.style.overflow = '';
-                };
-                
-                const newMoreBtn = bottomNavMore.cloneNode(true);
-                bottomNavMore.parentNode.replaceChild(newMoreBtn, bottomNavMore);
-                newMoreBtn.addEventListener('click', openMore);
-                
-                if (moreClose) moreClose.addEventListener('click', closeMore);
-                if (moreOverlay) moreOverlay.addEventListener('click', closeMore);
-            }
-
-            // Active state based on current URL
-            const currentPath = window.location.pathname;
-            const fileName = currentPath.split('/').pop() || 'index.html';
-            
-                        const navItems = {
-                'index.html': 'navHome',
-                'allproducts.html': 'bottomNavCategory',
-                'washroom-care.html': 'bottomNavCategory',
-                'pantry-care.html': 'bottomNavCategory',
-                'floorgeneral.html': 'bottomNavCategory',
-                'scent-machines.html': 'bottomNavCategory'
-            };
-
-            const activeId = navItems[fileName];
-            if (activeId) {
-                const element = document.getElementById(activeId);
-                if (element) element.classList.add('active');
             }
         });
     </script>
