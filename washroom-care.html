@@ -35,7 +35,7 @@
                 </svg>
             </button>
             <a href="index.html#top" class="nav-item" style="text-decoration: none;">HOME</a>
-            <a href="index.html#about-us" class="nav-item" style="text-decoration: none;">ABOUT US</a>
+            <a href="about.html" class="nav-item" style="text-decoration: none;">ABOUT US</a>
             <div class="nav-item has-dropdown">
                 WASHROOM CARE
                 <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -43,9 +43,9 @@
                     <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
                 <div class="dropdown-menu">
-                    <a href="washroom-care.html">Toilet Cleaning</a>
-                    <a href="washroom-care.html">Urinal Care</a>
-                    <a href="washroom-care.html">Air Freshners</a>
+                    <a href="washroom-care.html"><i class="fa-solid fa-toilet"></i> Toilet Cleaning</a>
+                    <a href="washroom-care.html"><i class="fa-solid fa-soap"></i> Urinal Care</a>
+                    <a href="washroom-care.html"><i class="fa-solid fa-spray-can-sparkles"></i> Air Freshners</a>
                 </div>
             </div>
             <div class="nav-item has-dropdown">
@@ -55,8 +55,8 @@
                     <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
                 <div class="dropdown-menu">
-                    <a href="pantry-care.html">Vessel Cleaners</a>
-                    <a href="pantry-care.html">Tissue Products</a>
+                    <a href="pantry-care.html"><i class="fa-solid fa-utensils"></i> Vessel Cleaners</a>
+                    <a href="pantry-care.html"><i class="fa-solid fa-toilet-paper"></i> Tissue Products</a>
                 </div>
             </div>
             <a href="scent-machines.html" class="nav-item" style="text-decoration: none;">SCENT MACHINES</a>
@@ -67,9 +67,9 @@
                     <polyline points="6 9 12 15 18 9"></polyline>
                 </svg>
                 <div class="dropdown-menu">
-                    <a href="floorgeneral.html">Floor Cleaning</a>
-                    <a href="floorgeneral.html">General Care</a>
-                    <a href="floorgeneral.html">Waste Management</a>
+                    <a href="floorgeneral.html"><i class="fa-solid fa-broom"></i> Floor Cleaning</a>
+                    <a href="floorgeneral.html"><i class="fa-solid fa-shield-halved"></i> General Care</a>
+                    <a href="floorgeneral.html"><i class="fa-solid fa-trash-can"></i> Waste Management</a>
                 </div>
             </div>
         </nav>
@@ -87,7 +87,7 @@
                     <span class="mobile-contact-number">+91 79960 77797</span>
                 </div>
             </a>
-            <a href="contact.html" class="btn btn-solid btn-magnetic" style="text-decoration: none;">Contact Us</a>
+            <a href="contact.html" class="btn btn-contact-blue btn-magnetic" style="text-decoration: none;">Contact Us</a>
             <a href="assets/Classic Traders Profile.pdf" download="ct_traders_brochure.pdf"
                 class="btn btn-outline btn-magnetic" style="text-decoration: none;">Download Brochure</a>
         </div>
@@ -99,17 +99,6 @@
             <h1 class="shop-title">Washroom Care</h1>
             <p class="shop-desc">Premium solutions for toilet cleaning, urinal care, and air freshening. Keep your
                 washrooms pristine and fragrant.</p>
-            <div class="search-controls">
-                <div class="search-input-wrapper">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="productSearch" class="search-input"
-                        placeholder="Search washroom products...">
-                </div>
-                <div class="view-toggles">
-                    <button class="view-btn active" id="btnGrid" title="Grid View"><i class="fas fa-th"></i></button>
-                    <button class="view-btn" id="btnList" title="List View"><i class="fas fa-list"></i></button>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -342,7 +331,7 @@
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="allproducts.html">Products</a></li>
                     <li><a href="index.html#working-process">Working Process</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -409,40 +398,72 @@
             <span>Explore Categories</span>
             <button class="bottom-more-close" id="categoryClose">&times;</button>
         </div>
-        <nav class="bottom-more-content">
-            <div class="drawer-section">
-                <h4>Washroom Care</h4>
-                <div class="drawer-grid">
-                    <a href="washroom-care.html" class="drawer-link">Toilet Cleaning</a>
-                    <a href="washroom-care.html" class="drawer-link">Urinal Care</a>
-                    <a href="washroom-care.html" class="drawer-link">Air Freshners</a>
+        <nav class="bottom-more-content category-accordion">
+            
+            <div class="category-item">
+                <div class="category-header">
+                    <div class="category-icon-badge bg-washroom"><i class="fa-solid fa-pump-soap" style="color: #0284c7;"></i></div>
+                    <span class="category-name">Washroom Care</span>
+                    <i class="fa-solid fa-chevron-down category-chevron"></i>
+                </div>
+                <div class="category-body">
+                    <div class="category-divider"></div>
+                    <div class="subcategory-list">
+                        <a href="washroom-care.html" class="subcategory-item"><i class="fa-solid fa-toilet"></i> Toilet Cleaning</a>
+                        <a href="washroom-care.html" class="subcategory-item"><i class="fa-solid fa-soap"></i> Urinal Care</a>
+                        <a href="washroom-care.html" class="subcategory-item"><i class="fa-solid fa-spray-can-sparkles"></i> Air Freshners</a>
+                    </div>
                 </div>
             </div>
-            <div class="drawer-section">
-                <h4>Pantry Care</h4>
-                <div class="drawer-grid">
-                    <a href="pantry-care.html" class="drawer-link">Vessel Cleaners</a>
-                    <a href="pantry-care.html" class="drawer-link">Tissue Products</a>
+
+            <div class="category-item">
+                <div class="category-header">
+                    <div class="category-icon-badge bg-pantry"><i class="fa-solid fa-basket-shopping" style="color: #16a34a;"></i></div>
+                    <span class="category-name">Pantry Care</span>
+                    <i class="fa-solid fa-chevron-down category-chevron"></i>
+                </div>
+                <div class="category-body">
+                    <div class="category-divider"></div>
+                    <div class="subcategory-list">
+                        <a href="pantry-care.html" class="subcategory-item"><i class="fa-solid fa-utensils"></i> Vessel Cleaners</a>
+                        <a href="pantry-care.html" class="subcategory-item"><i class="fa-solid fa-toilet-paper"></i> Tissue Products</a>
+                    </div>
                 </div>
             </div>
-            <div class="drawer-section">
-                <h4>Floor & General</h4>
-                <div class="drawer-grid">
-                    <a href="floorgeneral.html" class="drawer-link">Floor Cleaning</a>
-                    <a href="floorgeneral.html" class="drawer-link">General Care</a>
-                    <a href="floorgeneral.html" class="drawer-link">Waste Mgt</a>
+
+            <div class="category-item">
+                <div class="category-header">
+                    <div class="category-icon-badge bg-floor"><i class="fa-solid fa-broom" style="color: #ca8a04;"></i></div>
+                    <span class="category-name">Floor & General Care</span>
+                    <i class="fa-solid fa-chevron-down category-chevron"></i>
+                </div>
+                <div class="category-body">
+                    <div class="category-divider"></div>
+                    <div class="subcategory-list">
+                        <a href="floorgeneral.html" class="subcategory-item"><i class="fa-solid fa-broom"></i> Floor Cleaning</a>
+                        <a href="floorgeneral.html" class="subcategory-item"><i class="fa-solid fa-shield-halved"></i> General Care</a>
+                        <a href="floorgeneral.html" class="subcategory-item"><i class="fa-solid fa-trash-can"></i> Waste Management</a>
+                    </div>
                 </div>
             </div>
-            <div class="drawer-section">
-                <h4>Scent Machines</h4>
-                <div class="drawer-grid">
-                    <a href="scent-machines.html" class="drawer-link">Wall Mounted</a>
-                    <a href="scent-machines.html" class="drawer-link">Floor Standing</a>
+
+            <div class="category-item">
+                <div class="category-header">
+                    <div class="category-icon-badge bg-scent"><i class="fa-solid fa-wind" style="color: #9333ea;"></i></div>
+                    <span class="category-name">Scent Machines</span>
+                    <i class="fa-solid fa-chevron-down category-chevron"></i>
+                </div>
+                <div class="category-body">
+                    <div class="category-divider"></div>
+                    <div class="subcategory-list">
+                        <a href="scent-machines.html" class="subcategory-item"><i class="fa-solid fa-tv"></i> Wall Mounted</a>
+                        <a href="scent-machines.html" class="subcategory-item"><i class="fa-solid fa-fan"></i> Floor Standing</a>
+                    </div>
                 </div>
             </div>
+
         </nav>
     </div>
-
     <!-- More Options Drawer -->
     <div class="bottom-more-overlay" id="moreOverlay"></div>
     <div class="bottom-more-drawer" id="moreDrawer">
@@ -456,90 +477,13 @@
                 <div class="drawer-grid">
                     <a href="allproducts.html" class="drawer-link">View All Products</a>
                     <a href="assets/downloads/brochure.pdf" class="drawer-link" download>Download Brochure</a>
-                    <a href="index.html#about-us" class="drawer-link">About Us</a>
+                    <a href="about.html" class="drawer-link">About Us</a>
                     <a href="contact.html" class="drawer-link">Contact Us</a>
                 </div>
             </div>
         </nav>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const bottomNavCategory = document.getElementById('bottomNavCategory');
-            const bottomNavMore = document.getElementById('bottomNavMore');
-            
-            const categoryDrawer = document.getElementById('categoryDrawer');
-            const categoryOverlay = document.getElementById('categoryOverlay');
-            const categoryClose = document.getElementById('categoryClose');
-            
-            const moreDrawer = document.getElementById('moreDrawer');
-            const moreOverlay = document.getElementById('moreOverlay');
-            const moreClose = document.getElementById('moreClose');
-
-            if (bottomNavCategory && categoryDrawer && categoryOverlay) {
-                const openCategory = () => {
-                    categoryOverlay.classList.add('active');
-                    categoryDrawer.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                };
-                const closeCategory = () => {
-                    categoryOverlay.classList.remove('active');
-                    categoryDrawer.classList.remove('active');
-                    document.body.style.overflow = '';
-                };
-                
-                const newCatBtn = bottomNavCategory.cloneNode(true);
-                bottomNavCategory.parentNode.replaceChild(newCatBtn, bottomNavCategory);
-                newCatBtn.addEventListener('click', openCategory);
-                
-                if (categoryClose) categoryClose.addEventListener('click', closeCategory);
-                if (categoryOverlay) categoryOverlay.addEventListener('click', closeCategory);
-            }
-
-            if (bottomNavMore && moreDrawer && moreOverlay) {
-                const openMore = () => {
-                    moreOverlay.classList.add('active');
-                    moreDrawer.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                };
-                const closeMore = () => {
-                    moreOverlay.classList.remove('active');
-                    moreDrawer.classList.remove('active');
-                    document.body.style.overflow = '';
-                };
-                
-                const newMoreBtn = bottomNavMore.cloneNode(true);
-                bottomNavMore.parentNode.replaceChild(newMoreBtn, bottomNavMore);
-                newMoreBtn.addEventListener('click', openMore);
-                
-                if (moreClose) moreClose.addEventListener('click', closeMore);
-                if (moreOverlay) moreOverlay.addEventListener('click', closeMore);
-            }
-
-            // Active state based on current URL
-            const currentPath = window.location.pathname;
-            const fileName = currentPath.split('/').pop() || 'index.html';
-            
-                        const navItems = {
-                'index.html': 'navHome',
-                'allproducts.html': 'bottomNavCategory',
-                'washroom-care.html': 'bottomNavCategory',
-                'pantry-care.html': 'bottomNavCategory',
-                'floorgeneral.html': 'bottomNavCategory',
-                'scent-machines.html': 'bottomNavCategory'
-            };
-
-            const activeId = navItems[fileName];
-            if (activeId) {
-                const element = document.getElementById(activeId);
-                if (element) element.classList.add('active');
-            }
-        });
-    </script>
 </body>
-
-</html>
-
 
 
 

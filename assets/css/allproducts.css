@@ -767,21 +767,7 @@ body {
 
 /* Global Hide for Mobile-only elements on Desktop */
 .mobile-bottom-nav,
-.bottom-more-overlay,
-.bottom-more-drawer { display: none; }
 
-/* Mobile-only Contact Pill Styles */
-.mobile-contact-pill {
-    display: none;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    background: rgba(153, 27, 27, 0.06);
-    border: 1px solid rgba(153, 27, 27, 0.15);
-    border-radius: 50px;
-    padding: 6px 14px 6px 10px;
-    transition: all 0.2s ease;
-}
 
 .mobile-contact-icon {
     width: 30px;
@@ -929,32 +915,11 @@ body {
         border-radius: 50%;
     }
 
-    .bottom-more-drawer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #ffffff !important;
-        display: none;
-        z-index: 6000;
-        border-radius: 24px 24px 0 0;
-        padding: 24px;
-        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
-    }
+    
 
-    .bottom-more-drawer.active {
-        display: block !important;
-    }
+    
 
-    .bottom-more-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
-        font-weight: 800;
-        color: #111;
-        font-size: 18px;
-    }
+    
 
     .bottom-more-links a {
         display: flex !important;
@@ -972,5 +937,45 @@ body {
         margin-right: 14px !important;
         width: 24px;
         text-align: center;
+    }
+}
+
+/* Slider Categories Pill Colors (Brand Red) */
+.sub-nav-pill:hover {
+    border-color: #991b1b !important;
+    color: #991b1b !important;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15) !important;
+}
+
+.sub-nav-pill.active {
+    background: #991b1b !important;
+    color: #ffffff !important;
+    border-color: #991b1b !important;
+    box-shadow: 0 6px 15px rgba(153, 27, 27, 0.3) !important;
+}
+
+
+/* Navbar Center Items Hover Styling */
+.navbar-center .nav-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar-center .nav-item:hover {
+    background-color: #fff5f5 !important;
+    color: #991b1b !important;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.navbar-center .nav-item:hover .chevron {
+    color: #991b1b !important;
+}
+
+
+/* Hide Desktop Header CTAs on Mobile */
+@media (max-width: 900px) {
+    .navbar-right .btn-contact-blue,
+    .navbar-right .btn-outline {
+        display: none !important;
     }
 }

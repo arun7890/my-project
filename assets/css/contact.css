@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    REFINED CONTACT PAGE STYLES - CLEAN & PROFESSIONAL
    ========================================================= */
 
@@ -437,4 +437,135 @@
 
 .form-group label {
     padding-left: 2px !important; /* Anchor label more strictly to the left edge */
+}
+
+/* CTA Arrow Alignments */
+.btn-solid, .btn-submit {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.btn-solid:hover .btn-arrow, .btn-submit:hover .btn-arrow {
+    transform: translateX(4px) !important;
+}
+
+/* UNIVERSAL BUTTON STYLING (Red Theme) */
+.btn-learn-more,
+.btn-quote,
+.category-link,
+#viewAllWashroom,
+.btn-solid,
+.btn-submit {
+    background-color: #991b1b !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #991b1b !important;
+    box-shadow: 0 4px 10px rgba(153, 27, 27, 0.1) !important;
+}
+
+/* OUTLINE BUTTON STYLE (As shown in design) */
+.btn-outline {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #991b1b !important;
+    border: 1px solid #991b1b !important;
+    box-shadow: none !important;
+}
+
+.btn-learn-more:hover,
+.btn-quote:hover,
+.category-link:hover,
+#viewAllWashroom:hover,
+.btn-solid:hover,
+.btn-submit:hover {
+    background-color: #7f1d1d !important;
+    border-color: #7f1d1d !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.3) !important;
+    transform: translateY(-3px) !important;
+    background-image: none !important;
+}
+
+.btn-outline:hover {
+    background-color: #991b1b !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.2) !important;
+}
+
+/* Ensure arrows are white if present and animate properly */
+.btn-learn-more .btn-arrow,
+.btn-outline .btn-arrow,
+.btn-quote .btn-arrow {
+    stroke: #ffffff !important;
+    transition: transform 0.3s ease !important;
+}
+
+.btn-learn-more:hover .btn-arrow,
+.btn-outline:hover .btn-arrow,
+.btn-quote:hover .btn-arrow {
+    transform: translateX(4px) !important;
+}
+
+/* Contact Us Button Override (Changed from Blue to Red to match design) */
+.btn-contact-blue {
+    background-color: #991b1b !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #991b1b !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(153, 27, 27, 0.1) !important;
+}
+
+.btn-contact-blue:hover {
+    background-color: #7f1d1d !important;
+    border-color: #7f1d1d !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.3) !important;
+    transform: translateY(-3px) !important;
+    background-image: none !important;
+}
+
+
+/* Slider Categories Pill Colors (Brand Red) */
+.sub-nav-pill:hover {
+    border-color: #991b1b !important;
+    color: #991b1b !important;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15) !important;
+}
+
+.sub-nav-pill.active {
+    background: #991b1b !important;
+    color: #ffffff !important;
+    border-color: #991b1b !important;
+    box-shadow: 0 6px 15px rgba(153, 27, 27, 0.3) !important;
+}
+
+
+/* Navbar Center Items Hover Styling */
+.navbar-center .nav-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar-center .nav-item:hover {
+    background-color: #fff5f5 !important;
+    color: #991b1b !important;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.navbar-center .nav-item:hover .chevron {
+    color: #991b1b !important;
+}
+
+
+/* Hide Desktop Header CTAs on Mobile */
+@media (max-width: 900px) {
+    .navbar-right .btn-contact-blue,
+    .navbar-right .btn-outline {
+        display: none !important;
+    }
 }

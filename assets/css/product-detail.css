@@ -804,24 +804,7 @@ body {
 
 /* Global Hide for Mobile-only elements on Desktop */
 .mobile-bottom-nav,
-.bottom-more-overlay,
-.bottom-more-drawer {
-    display: none;
-}
 
-
-/* Mobile-only Contact Pill Styles */
-.mobile-contact-pill {
-    display: none;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    background: rgba(153, 27, 27, 0.06);
-    border: 1px solid rgba(153, 27, 27, 0.15);
-    border-radius: 50px;
-    padding: 6px 14px 6px 10px;
-    transition: all 0.2s ease;
-}
 
 .mobile-contact-icon {
     width: 30px;
@@ -969,32 +952,11 @@ body {
         border-radius: 50%;
     }
 
-    .bottom-more-drawer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #ffffff !important;
-        display: none;
-        z-index: 6000;
-        border-radius: 24px 24px 0 0;
-        padding: 24px;
-        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
-    }
+    
 
-    .bottom-more-drawer.active {
-        display: block !important;
-    }
+    
 
-    .bottom-more-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
-        font-weight: 800;
-        color: #111;
-        font-size: 18px;
-    }
+    
 
     .bottom-more-links a {
         display: flex !important;
@@ -1013,4 +975,59 @@ body {
         width: 24px;
         text-align: center;
     }
+}
+
+/* Standardize Request A Quote Button to Solid Red */
+.btn-request-quote {
+    background-color: #991b1b !important;
+    color: #ffffff !important;
+    border: 1px solid #991b1b !important;
+    box-shadow: 0 4px 10px rgba(153, 27, 27, 0.1) !important;
+}
+
+.btn-request-quote:hover {
+    background-color: #7f1d1d !important;
+    border-color: #7f1d1d !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.3) !important;
+    transform: translateY(-3px) !important;
+}
+
+
+/* Modal Space Compression (Anti-Scroll) */
+.contact-modal {
+    padding: 25px 25px !important;
+}
+.contact-modal h3 {
+    margin-bottom: 5px !important;
+    font-size: 1.6rem !important;
+}
+.contact-modal p {
+    margin-bottom: 15px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+}
+.contact-modal .form-group {
+    margin-bottom: 12px !important;
+}
+.contact-modal .form-group label {
+    margin-bottom: 4px !important;
+    font-size: 0.85rem !important;
+}
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    padding: 10px 14px !important;
+}
+.contact-modal .form-group textarea {
+    height: 75px !important; 
+    min-height: 75px !important;
+}
+.contact-modal .btn-send-enquiry,
+.contact-modal button[type="submit"] {
+    padding: 12px 24px !important;
+    margin-top: 5px !important;
+}
+.contact-modal .modal-close {
+    top: 15px !important;
+    right: 20px !important;
 }

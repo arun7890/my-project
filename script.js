@@ -237,18 +237,91 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ─── Mobile Drawer Accordion ──────────────────────────────────────────────
-    document.querySelectorAll('.drawer-section h4').forEach(header => {
-        header.addEventListener('click', () => {
-            const section = header.parentElement;
-            // Optionally close others
-            // document.querySelectorAll('.drawer-section').forEach(s => {
-            //     if(s !== section) s.classList.remove('active');
-            // });
-            section.classList.toggle('active');
-        });
-    });
+    // ─── Mobile Bottom Nav Drawer Logic ──────────────────────────────────────
+    const bottomNavCategory = document.getElementById('bottomNavCategory');
+    const bottomNavMore = document.getElementById('bottomNavMore');
+    
+    const categoryDrawer = document.getElementById('categoryDrawer');
+    const categoryOverlay = document.getElementById('categoryOverlay');
+    const categoryClose = document.getElementById('categoryClose');
+    
+    const moreDrawer = document.getElementById('moreDrawer');
+    const moreOverlay = document.getElementById('moreOverlay');
+    const moreClose = document.getElementById('moreClose');
+
+    if (bottomNavCategory && categoryDrawer && categoryOverlay) {
+        const openCategory = () => {
+            categoryOverlay.classList.add('active');
+            categoryDrawer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+        const closeCategory = () => {
+            categoryOverlay.classList.remove('active');
+            categoryDrawer.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+        bottomNavCategory.addEventListener('click', openCategory);
+        if (categoryClose) categoryClose.addEventListener('click', closeCategory);
+        if (categoryOverlay) categoryOverlay.addEventListener('click', closeCategory);
+    }
+
+    if (bottomNavMore && moreDrawer && moreOverlay) {
+        const openMore = () => {
+            moreOverlay.classList.add('active');
+            moreDrawer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+        const closeMore = () => {
+            moreOverlay.classList.remove('active');
+            moreDrawer.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+        bottomNavMore.addEventListener('click', openMore);
+        if (moreClose) moreClose.addEventListener('click', closeMore);
+        if (moreOverlay) moreOverlay.addEventListener('click', closeMore);
+    }
+
+    // Active state based on current URL
+    const currentPath = window.location.pathname;
+    const fileName = currentPath.split('/').pop() || 'index.html';
+    const navItems = {
+        'index.html': 'navHome',
+        'allproducts.html': 'bottomNavCategory',
+        'washroom-care.html': 'bottomNavCategory',
+        'pantry-care.html': 'bottomNavCategory',
+        'floorgeneral.html': 'bottomNavCategory',
+        'scent-machines.html': 'bottomNavCategory'
+    };
+    const activeId = navItems[fileName];
+    if (activeId) {
+        const element = document.getElementById(activeId);
+        if (element) element.classList.add('active');
+    }
 
     // ─── Boot ─────────────────────────────────────────────────────────────────
     filterProducts();
+});
+
+// --- FINAL CLEAN CATEGORY ACCORDION LOGIC ---
+document.addEventListener('DOMContentLoaded', () => {
+    const categories = document.querySelectorAll('.category-item');
+    categories.forEach(item => {
+        const header = item.querySelector('.category-header');
+        if (!header) return;
+        
+        header.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const wasActive = item.classList.contains('active');
+            
+            // Close all
+            categories.forEach(c => c.classList.remove('active'));
+            
+            // Toggle current
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        });
+    });
 });

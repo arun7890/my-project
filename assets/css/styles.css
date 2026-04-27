@@ -935,7 +935,7 @@ body {
 
 /* Footer Styles */
 .main-footer {
-    background-color: #111111;
+    background-color: #991b1b;
     color: #ffffff;
     padding: 80px 6% 30px;
     margin-top: 60px;
@@ -1163,6 +1163,9 @@ body {
     .mobile-bottom-nav {
         display: flex;
     }
+    .bottom-more-drawer {
+        display: block;
+    }
 }
 
 .bottom-nav-item {
@@ -1217,29 +1220,32 @@ body {
 }
 
 .bottom-more-overlay.active {
-    display: block;
-    opacity: 1;
+    display: block !important;
+    opacity: 1 !important;
 }
 
 /* Revised Drawer Styles to match image */
 .bottom-more-drawer {
+    display: none; /* Hidden on desktop */
     position: fixed;
     bottom: -100%;
     left: 0;
     width: 100%;
     background: #ffffff;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     z-index: 10001;
-    padding: 35px 24px 50px;
+    padding: 25px 20px 40px;
     transition: bottom 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.12);
-    max-height: 88vh;
+    max-height: 75vh;
     overflow-y: auto;
 }
 
 .bottom-more-drawer.active {
-    bottom: 0;
+    display: block !important;
+    bottom: 0 !important;
+    visibility: visible !important;
 }
 
 .bottom-more-header {
@@ -1288,35 +1294,28 @@ body {
 
 .drawer-section h4 {
     color: #991b1b;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     margin-bottom: 15px;
     padding-left: 4px;
-    cursor: pointer;
+    cursor: default !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.drawer-section h4::after {
-    content: '\f078';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    font-size: 12px;
-    transition: transform 0.3s ease;
-    color: #991b1b;
-}
+/* Chevron removed - static display */
 
 .drawer-section.active h4::after {
     transform: rotate(180deg);
 }
 
 .drawer-grid {
-    display: none;
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 8px;
 }
 
 .drawer-section.active .drawer-grid {
@@ -1331,12 +1330,12 @@ body {
 
 .drawer-link {
     display: block;
-    padding: 16px 14px;
-    background: #f8f9fa;
-    border-radius: 14px;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border-radius: 12px;
     text-decoration: none !important;
-    color: #333;
-    font-size: 13px;
+    color: #444;
+    font-size: 12px;
     font-weight: 700;
     transition: all 0.25s ease;
     border: 1px solid transparent;
@@ -1617,3 +1616,352 @@ body {
     padding-left: 2px !important; /* Anchor label more strictly to the left edge */
 }
 
+
+/* CTA Arrow Alignments */
+.btn-solid, .btn-submit {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.btn-solid:hover .btn-arrow, .btn-submit:hover .btn-arrow {
+    transform: translateX(4px) !important;
+}
+
+/* UNIVERSAL BUTTON STYLING (Red Theme) */
+.btn-learn-more,
+.btn-quote,
+.category-link,
+#viewAllWashroom,
+.btn-solid,
+.btn-submit {
+    background-color: #991b1b !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #991b1b !important;
+    box-shadow: 0 4px 10px rgba(153, 27, 27, 0.1) !important;
+}
+
+/* OUTLINE BUTTON STYLE (As shown in design) */
+.btn-outline {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #991b1b !important;
+    border: 1px solid #991b1b !important;
+    box-shadow: none !important;
+}
+
+.btn-outline:hover,
+.btn-learn-more:hover,
+.btn-quote:hover,
+.category-link:hover,
+#viewAllWashroom:hover,
+.btn-solid:hover,
+.btn-submit:hover {
+    background-color: #7f1d1d !important;
+    border-color: #7f1d1d !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.3) !important;
+    transform: translateY(-3px) !important;
+    background-image: none !important;
+}
+
+/* Ensure arrows are white if present and animate properly */
+.btn-learn-more .btn-arrow,
+.btn-outline .btn-arrow,
+.btn-quote .btn-arrow {
+    stroke: #ffffff !important;
+    transition: transform 0.3s ease !important;
+}
+
+.btn-learn-more:hover .btn-arrow,
+.btn-outline:hover .btn-arrow,
+.btn-quote:hover .btn-arrow {
+    transform: translateX(4px) !important;
+}
+
+/* Contact Us Button Override (Changed from Blue to Red to match design) */
+.btn-contact-blue {
+    background-color: #991b1b !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    border: 1px solid #991b1b !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(153, 27, 27, 0.1) !important;
+}
+
+.btn-contact-blue:hover {
+    background-color: #7f1d1d !important;
+    border-color: #7f1d1d !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(153, 27, 27, 0.3) !important;
+    transform: translateY(-3px) !important;
+    background-image: none !important;
+}
+
+/* Guarantee Chevron Rendering and Rotation clearly on hover across all pages */
+.navbar .nav-item .chevron,
+.nav-item.has-dropdown .chevron {
+    display: inline-block !important;
+    transform-origin: center !important;
+    transition: transform 0.3s ease !important;
+    stroke: currentColor !important;
+}
+
+.navbar .nav-item:hover .chevron,
+.nav-item.has-dropdown:hover .chevron {
+    transform: rotate(180deg) !important;
+    color: #991b1b !important; 
+}
+
+/* Dropdown Hover Arrow Fix (copied from home.css) */
+.dropdown-menu a i {
+    display: none !important;
+}
+
+.dropdown-menu a {
+    position: relative !important;
+}
+
+.dropdown-menu a::before {
+    content: '→';
+    position: absolute;
+    left: 6px;
+    opacity: 0;
+    color: #991b1b;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #fef2f2 !important;
+    color: #991b1b !important;
+    padding-left: 28px !important;
+}
+
+.dropdown-menu a:hover::before {
+    opacity: 1 !important;
+    left: 12px !important;
+}
+
+
+/* Slider Categories Pill Colors (Brand Red) */
+.sub-nav-pill:hover {
+    border-color: #991b1b !important;
+    color: #991b1b !important;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15) !important;
+}
+
+.sub-nav-pill.active {
+    background: #991b1b !important;
+    color: #ffffff !important;
+    border-color: #991b1b !important;
+    box-shadow: 0 6px 15px rgba(153, 27, 27, 0.3) !important;
+}
+
+
+/* Navbar Center Items Hover Styling */
+.navbar-center .nav-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar-center .nav-item:hover {
+    background-color: #fff5f5 !important;
+    color: #991b1b !important;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+.navbar-center .nav-item:hover .chevron {
+    color: #991b1b !important;
+}
+
+
+/* Modal Space Compression (Anti-Scroll) */
+.contact-modal {
+    padding: 25px 25px !important;
+}
+.contact-modal h3 {
+    margin-bottom: 5px !important;
+    font-size: 1.6rem !important;
+}
+.contact-modal p {
+    margin-bottom: 15px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+}
+.contact-modal .form-group {
+    margin-bottom: 12px !important;
+}
+.contact-modal .form-group label {
+    margin-bottom: 4px !important;
+    font-size: 0.85rem !important;
+}
+.contact-modal .form-group input,
+.contact-modal .form-group textarea {
+    padding: 10px 14px !important;
+}
+.contact-modal .form-group textarea {
+    height: 75px !important; 
+    min-height: 75px !important;
+}
+.contact-modal .btn-send-enquiry,
+.contact-modal button[type="submit"] {
+    padding: 12px 24px !important;
+    margin-top: 5px !important;
+}
+.contact-modal .modal-close {
+    top: 15px !important;
+    right: 20px !important;
+}
+
+
+/* Hide Header Contact Us Button on Mobile */
+@media (max-width: 768px) {
+    .navbar-right .btn-contact-blue {
+        display: none !important;
+    }
+}
+
+
+/* Hide Desktop Header CTAs on Mobile */
+@media (max-width: 900px) {
+    .navbar-right .btn-contact-blue,
+    .navbar-right .btn-outline {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   MASTER PRESET: MOBILE CATEGORY ACCORDION
+   ========================================================= */
+
+.category-accordion {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding: 10px 4px !important;
+}
+
+.category-item {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    border: 1px solid #eeeeee !important;
+    overflow: hidden !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.category-item.active {
+    border-color: #991b1b !important;
+    box-shadow: 0 12px 35px rgba(153, 27, 27, 0.12) !important;
+    transform: translateY(-2px) !important;
+}
+
+.category-header {
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    gap: 6px !important;
+    background: #ffffff !important;
+    border: none !important;
+}
+
+.category-icon-badge {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    flex-shrink: 0 !important;
+}
+
+.category-name {
+    flex: 1 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    color: #111 !important;
+    text-align: left !important;
+}
+
+.category-chevron {
+    font-size: 14px !important;
+    color: #999 !important;
+    transition: transform 0.4s ease !important;
+}
+
+.category-item.active .category-chevron {
+    transform: rotate(180deg) !important;
+    color: #991b1b !important;
+}
+
+.category-body {
+    max-height: 0 !important;
+    visibility: hidden !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease !important;
+    background: #ffffff !important;
+}
+
+.category-item.active .category-body {
+    max-height: 600px !important;
+    visibility: visible !important;
+}
+
+.subcategory-list {
+    padding: 8px 15px 20px 60px !important; /* Adjusted for smaller header */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+}
+
+.subcategory-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 14px !important;
+    border-radius: 10px !important;
+    color: #555 !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    background: #f8fafc !important;
+    border: 1px solid transparent !important;
+}
+
+.subcategory-item:hover, .subcategory-item:active {
+    background: #ffffff !important;
+    border-color: #f1f5f9 !important;
+    color: #991b1b !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04) !important;
+    transform: translateX(4px) !important;
+}
+
+.subcategory-item i {
+    width: 24px !important;
+    text-align: center !important;
+    color: #991b1b !important;
+    font-size: 15px !important;
+}
+
+/* Icons Backgrounds */
+.bg-washroom { background-color: #e0f2fe !important; }
+.bg-pantry { background-color: #fef9c3 !important; }
+.bg-floor { background-color: #dcfce7 !important; }
+.bg-scent { background-color: #f3e8ff !important; }
+
+/* Modal Header Fix */
+.bottom-more-header span {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 20px !important;
+}
